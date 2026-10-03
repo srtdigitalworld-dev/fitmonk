@@ -160,6 +160,77 @@ document.querySelectorAll<HTMLFormElement>('[data-purchase]').forEach(form=>{
   });
 });
 
+// Direct Buy on WhatsApp handler from Product Detail Page
+document.querySelectorAll<HTMLButtonElement>('[data-buy-whatsapp-direct]').forEach(button => {
+  button.addEventListener('click', async () => {
+    const buyPanel = button.closest('.product-buy-panel');
+    const form = buyPanel?.querySelector<HTMLFormElement>('form[data-purchase]') || document.querySelector<HTMLFormElement>('form[data-purchase]');
+    const productId = form?.dataset.purchase;
+    if (!productId) return;
+
+    const select = form.querySelector<HTMLSelectElement>('select[name="variant"]');
+    const qtyInput = form.querySelector<HTMLInputElement>('input[name="quantity"]');
+    const quantity = Math.max(1, Math.min(99, Number(qtyInput?.value) || 1));
+    const variantId = select?.value || null;
+    const statusEl = form.querySelector<HTMLElement>('[data-purchase-status]');
+
+    // Prevent duplicate draft creation
+    if (button.disabled) return;
+    button.disabled = true;
+
+    const span = button.querySelector('span');
+    const originalText = span ? span.textContent : button.textContent;
+    if (span) span.textContent = 'Preparing Order...';
+    if (statusEl) {
+      statusEl.textContent = 'Preparing your order…';
+      statusEl.className = 'status';
+    }
+
+    try {
+      const res = await fetch('/api/orders/draft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId,
+          variantId,
+          quantity
+        })
+      });
+
+      const data = await res.json() as any;
+
+      if (!res.ok || !data.success) {
+        throw new Error(data?.message || "Couldn't prepare your order. Please try again.");
+      }
+
+      if (statusEl) {
+        statusEl.textContent = `✓ Order ${data.orderNumber} prepared! Opening WhatsApp…`;
+        statusEl.className = 'status success';
+      }
+
+      // Open WhatsApp immediately
+      window.open(data.whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      // Reset button after short delay to allow retry if window blocked
+      setTimeout(() => {
+        if (span) span.textContent = originalText;
+        button.disabled = false;
+      }, 2500);
+    } catch (err: any) {
+      const errMsg = err?.message || "Couldn't prepare your order. Please try again.";
+      if (statusEl) {
+        statusEl.textContent = errMsg;
+        statusEl.className = 'status error';
+      }
+      if (span) span.textContent = "Couldn't prepare your order. Please try again.";
+      setTimeout(() => {
+        if (span) span.textContent = originalText;
+        button.disabled = false;
+      }, 3000);
+    }
+  });
+});
+
 // PROGRESSIVE 3-STEP CHECKOUT LOGIC
 function initCheckoutProgressive() {
   if (!checkout) return;
@@ -510,14 +581,43 @@ function initCheckoutProgressive() {
     }
   });
 
-  // Form submission
-  checkout.addEventListener('submit', event => {
+  // Form submission connected to POST /api/orders/draft
+  checkout.addEventListener('submit', async event => {
     event.preventDefault();
     if (!validateStep1()) { goToStep(1); return; }
     if (!validateStep2()) { goToStep(2); return; }
 
     const status = document.querySelector<HTMLElement>('[data-checkout-status]')!;
+    const submitBtn = checkout.querySelector<HTMLButtonElement>('[data-checkout-submit]');
+    const stickyAction = document.querySelector<HTMLButtonElement>('[data-sticky-action]');
+
+    if (submitBtn?.disabled && submitBtn.textContent?.includes('Preparing')) return;
+
+    const originalSubmitText = submitBtn?.textContent || 'Place Order on WhatsApp →';
+    const originalStickyText = stickyAction?.textContent || 'Place Order on WhatsApp →';
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Preparing Order...';
+    }
+    if (stickyAction) {
+      stickyAction.disabled = true;
+      stickyAction.textContent = 'Preparing Order...';
+    }
+    status.textContent = 'Preparing your order draft…';
+    status.className = 'checkout-status-msg';
+
     try {
+      const items = store.getItems().map(item => ({
+        productId: item.productId,
+        variantId: item.variantId,
+        quantity: item.quantity
+      }));
+
+      if (!items.length) {
+        throw new Error('Your cart is empty. Please add items before checking out.');
+      }
+
       const customer: Customer = {
         name: nameInput.value.trim(),
         phone: phoneInput.value.trim(),
@@ -529,25 +629,50 @@ function initCheckoutProgressive() {
         note: noteInput?.value.trim() || undefined
       };
 
-      const quote = quoteCart(store.getItems(), products);
-      const message = buildOrderMessage(customer, quote);
-      const url = buildWhatsAppUrl(customer, quote);
+      const res = await fetch('/api/orders/draft', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items, customer })
+      });
 
-      const preview = document.querySelector<HTMLDetailsElement>('[data-message-preview]')!;
+      const data = await res.json() as any;
+
+      if (!res.ok || !data.success) {
+        throw new Error(data?.message || "Couldn't prepare your order. Please try again.");
+      }
+
+      const preview = document.querySelector<HTMLDetailsElement>('[data-message-preview]');
       if (preview) {
         preview.hidden = false;
-        preview.querySelector('pre')!.textContent = message;
+        const pre = preview.querySelector('pre');
+        if (pre) pre.textContent = data.whatsappMessage;
       }
       const waLink = document.querySelector<HTMLAnchorElement>('[data-whatsapp-link]');
-      if (waLink) waLink.href = url;
+      if (waLink) waLink.href = data.whatsappUrl;
 
-      status.textContent = '✓ Order prepared! WhatsApp is opening with your items. Review and press Send.';
+      status.textContent = `✓ Order ${data.orderNumber} prepared! WhatsApp is opening with your items. Review and press Send.`;
       status.className = 'checkout-status-msg success';
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } catch (error) {
-      status.textContent = error instanceof Error ? error.message : 'Unable to prepare order.';
+
+      // Clear the local cart since order draft has been committed to D1
+      store.clear();
+
+      window.open(data.whatsappUrl, '_blank', 'noopener,noreferrer');
+
+      if (submitBtn) submitBtn.textContent = 'Order Prepared ✓';
+      if (stickyAction) stickyAction.textContent = 'Order Prepared ✓';
+    } catch (error: any) {
+      status.textContent = error?.message || "Couldn't prepare your order. Please try again.";
       status.className = 'checkout-status-msg error';
       status.scrollIntoView({ block: 'nearest' });
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalSubmitText;
+      }
+      if (stickyAction) {
+        stickyAction.disabled = false;
+        stickyAction.textContent = originalStickyText;
+      }
     }
   });
 

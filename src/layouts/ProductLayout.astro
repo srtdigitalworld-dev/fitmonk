@@ -21,6 +21,8 @@ const sub=categories.find(c=>c.slug===p.subcategory);
 const guide=learnGuideMap[p.learnHub];
 const crumbs=[{name:'Home',path:'/'},{name:'Shop',path:'/shop/'},{name:family.name,path:`/shop/${family.slug}/`},...(sub?[{name:sub.name,path:`/shop/${sub.slug}/`}]:[]),{name:p.name,path:`/product/${p.slug}/`}];
 const related=(await getProducts()).filter(entry=>p.relatedProducts.includes(entry.data.id));
+const selected = p.variants[0] ?? p;
+const canAdd = p.orderable && selected.price !== null && selected.available !== false;
 ---
 <BaseLayout title={p.seoTitle??`${p.name} | ${site.brandName}`} description={p.seoDescription??p.description??site.defaultDescription} socialImage={p.images[0]?.src}>
   {p.orderable && <JsonLd slot="head" data={productJsonLd(p)} />}
@@ -64,7 +66,7 @@ const related=(await getProducts()).filter(entry=>p.relatedProducts.includes(ent
       )}
       <p class="gallery-caption">{p.images.length > 1 ? 'Available product views: original product photo and presentation packaging.' : (p.images.length ? 'Official Fit Monk product photograph.' : 'A dedicated space for the final product photograph.')}</p>
     </div>
-    <div class="product-buy-panel"><a href={`/shop/${sub?.slug??family.slug}/`} class="eyebrow">{sub?.name??family.name}</a><h1>{p.name}</h1><p class="product-intro">{p.description}</p><Purchase product={p} /><a class="button button-secondary product-whatsapp" href="/cart/"><Icon name="chat" size={18} /> Order through WhatsApp</a>{p.available!==null && <p class="stock-status">{p.available?'Available':'Currently unavailable'}</p>}<div class="purchase-notes"><p><Icon name="chat" size={18} />Availability confirmed personally by the seller.</p><p><Icon name="box" size={18} />Shipping calculated where confirmed, otherwise quoted by the seller.</p></div></div>
+    <div class="product-buy-panel"><a href={`/shop/${sub?.slug??family.slug}/`} class="eyebrow">{sub?.name??family.name}</a><h1>{p.name}</h1><p class="product-intro">{p.description}</p><Purchase product={p} />{canAdd ? (<button type="button" data-buy-whatsapp-direct class="button button-secondary product-whatsapp"><Icon name="chat" size={18} /> <span>Buy on WhatsApp</span></button>) : (<a class="button button-secondary product-whatsapp" href="/cart/"><Icon name="chat" size={18} /> Order through WhatsApp</a>)}{p.available!==null && <p class="stock-status">{p.available?'Available':'Currently unavailable'}</p>}<div class="purchase-notes"><p><Icon name="chat" size={18} />Availability confirmed personally by the seller.</p><p><Icon name="box" size={18} />Shipping calculated where confirmed, otherwise quoted by the seller.</p></div></div>
   </div>
   <script>
     document.querySelectorAll('.gallery-thumb-btn').forEach(btn => {
