@@ -81,9 +81,9 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     const userAgent = request.headers.get('user-agent') || 'unknown';
 
     await env.DB.prepare(
-      `INSERT INTO admin_sessions (id, admin_id, token_hash, ip_address, user_agent, expires_at, created_at, last_active_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
-    ).bind(sessionId, admin.id, tokenHash, ipAddress, userAgent, expiresAt, now, now).run();
+      `INSERT INTO admin_sessions (id, admin_id, token_hash, ip_address, user_agent, expires_at, created_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)`
+    ).bind(sessionId, admin.id, tokenHash, ipAddress, userAgent, expiresAt, now).run();
 
     // 4. Update admin last login
     await env.DB.prepare(
@@ -92,9 +92,9 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
 
     // 5. Audit log
     await env.DB.prepare(
-      `INSERT INTO audit_logs (id, admin_id, action, entity_type, entity_id, ip_address, user_agent, created_at)
-       VALUES (?, ?, 'admin.login', 'admin', ?, ?, ?, ?)`
-    ).bind('aud_' + Math.random().toString(36).substring(2, 10), admin.id, admin.id, ipAddress, userAgent, now).run();
+      `INSERT INTO audit_logs (id, admin_id, action, entity_type, entity_id, metadata, created_at)
+       VALUES (?, ?, 'admin.login', 'admin', ?, ?, ?)`
+    ).bind('aud_' + Math.random().toString(36).substring(2, 10), admin.id, admin.id, JSON.stringify({ ip: ipAddress, user_agent: userAgent }), now).run();
 
     return new Response(
       JSON.stringify({

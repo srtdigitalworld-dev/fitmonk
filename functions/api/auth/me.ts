@@ -60,11 +60,6 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
       );
     }
 
-    // Refresh last active timestamp
-    await env.DB.prepare(
-      `UPDATE admin_sessions SET last_active_at = ? WHERE id = ?`
-    ).bind(now, session.id).run();
-
     return new Response(
       JSON.stringify({
         authenticated: true,
