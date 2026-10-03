@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+/* Fit Monk Admin CMS Design System */
+:root {
+  --fm-red: #D62828;
+  --fm-yellow: #F4B400;
+  --fm-orange: #F57C00;
+  --fm-brown: #8B4513;
+  --fm-charcoal: #2E2E2E;
+  --fm-bg: #F8FAFC;
+  --fm-surface: #FFFFFF;
+  --fm-border: #E2E8F0;
+  --fm-text: #1E293B;
+  --fm-text-muted: #64748B;
+}
+
+body.admin-body {
+  background-color: var(--fm-bg);
+  color: var(--fm-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Custom Scrollbars */
+.admin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.admin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.admin-scrollbar::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.admin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Tab Management */
+.tab-content {
+  display: none !important;
+}
+.tab-content.active {
+  display: block !important;
+}
+
+/* Nav Item States */
+.admin-nav-btn {
+  transition: all 0.15s ease-in-out;
+}
+.admin-nav-btn.active-nav {
+  background-color: #FEF2F2 !important;
+  color: #D62828 !important;
+  font-weight: 600 !important;
+  border-right: 3px solid #D62828;
+}
+.admin-nav-btn.active-nav svg {
+  color: #D62828 !important;
+}
+
+/* Table Styling */
+.admin-table th {
+  background-color: #F8FAFC;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  border-bottom: 1px solid #E2E8F0;
+}
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #F1F5F9;
+  font-size: 13px;
+  color: #334155;
+  vertical-align: middle;
+}
+.admin-table tr:hover td {
+  background-color: #F8FAFC;
+}
+
+/* Button & Input Base */
+.fm-btn-primary {
+  background-color: #D62828;
+  color: #FFFFFF;
+  transition: background-color 0.15s ease;
+}
+.fm-btn-primary:hover {
+  background-color: #B51E1E;
+}
+.fm-input {
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.fm-input:focus {
+  border-color: #D62828;
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.15);
+}
