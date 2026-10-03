@@ -1,0 +1,8 @@
+---
+import { getProducts } from '../../lib/catalog';
+import type { CommerceProduct } from '../../lib/cart';
+const products: CommerceProduct[] = (await getProducts()).map(({data:p}) => ({id:p.id,name:p.name,slug:p.slug,status:p.status,available:p.available,orderable:p.orderable,price:p.price,compareAtPrice:p.compareAtPrice,packSize:p.packSize,weightGrams:p.weightGrams,shipping:p.shipping,variants:p.variants,promotions:p.promotions,thumbnail:p.images[0] ? {src:p.images[0].sources?.[0]?.src ?? p.images[0].src,alt:p.images[0].alt}:null}));
+---
+<script type="application/json" id="commerce-catalog" set:html={JSON.stringify(products).replace(/</g, '\\u003c')} />
+<noscript><p class="notice">Enable JavaScript to use the cart and checkout. You can also contact us directly to ask about a product.</p></noscript>
+<script>import '../../lib/cart/ui';</script>

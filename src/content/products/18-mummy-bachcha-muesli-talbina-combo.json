@@ -1,0 +1,75 @@
+{
+  "id": "fm-18",
+  "catalogNumber": 18,
+  "slug": "mummy-bachcha-muesli-talbina-combo",
+  "name": "Mummy Bachcha Muesli & Talbina Combo – 1500g",
+  "sourceName": "1500 Mummy bachcha Muesli - Talbina Combo",
+  "displayName": "Mummy Bachcha Muesli & Talbina Combo – 1500g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [
+    "breakfast"
+  ],
+  "description": "The Fit Monk Mummy Bachcha Muesli & Talbina Combo brings together three popular breakfast staples: Elaichi Badam Talbina, Chocolate Badam Talbina, and Mummy Bachcha Muesli. Listed under a 1500g catalog weight, this variety bundle allows households to sample different warm porridge and cold cereal options.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/18-muesli-talbina-combo.jpg",
+      "alt": "Mummy Bachcha Muesli–Talbina Combo",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
+  "price": 99900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": null,
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": null,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-02",
+    "fm-09",
+    "fm-19"
+  ],
+  "seoTitle": "Mummy Bachcha Muesli & Talbina Combo – 1500g | Fit Monk",
+  "seoDescription": "Fit Monk Mummy Bachcha Muesli & Talbina Combo 1500g. Includes Elaichi Badam Talbina, Chocolate Talbina & Muesli. Check bundle details via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "1500 has no unit in the source name. Component weights and “and more” are unresolved."
+  ],
+  "orderable": false,
+  "kind": "bundle",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 5, item 18",
+    "raw": {
+      "sourceName": "1500 Mummy bachcha Muesli - Talbina Combo",
+      "cardPricePaise": 99900,
+      "compareAtPricePaise": null,
+      "description": "It contains Elaichi Badam Talbina, Chocolate Badam Talbina & Mummy bachcha Muesli worth rupees 375+375 and more.",
+      "text": "1500 Mummy bachcha Muesli - Talbina Combo\n₹999.00\nIt  contains  Elaichi  Badam  Talbina,  Chocolate  Badam  Talbina  &  Mummy\nbachcha Muesli worth rupees 375+375 and more."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What items are named in this combo?",
+      "answer": "The catalog names Elaichi Badam Talbina, Chocolate Badam Talbina, and Mummy Bachcha Muesli."
+    },
+    {
+      "question": "Why is this combo subject to confirmation?",
+      "answer": "The catalog indicates additional items (\"and more\") beyond the named values; exact pack weights and contents should be verified with the seller."
+    }
+  ]
+}

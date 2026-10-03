@@ -1,0 +1,75 @@
+{
+  "id": "fm-19",
+  "catalogNumber": 19,
+  "slug": "talbina-muesli-combo",
+  "name": "Talbina & Muesli Combo – 1500g",
+  "sourceName": "1500g TALBINA-MUESLI COMBO",
+  "displayName": "Talbina & Muesli Combo – 1500g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [
+    "breakfast"
+  ],
+  "description": "The Fit Monk Talbina & Muesli Combo is a 1500g breakfast bundle combining two distinct Talbina flavors—Elaichi Badam and Chocolate Badam—together with Fit Monk Dryfruits Muesli. This trio offers variety for daily breakfast, alternating between hearty cooked barley porridge and crunchy fruit muesli.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/19-talbina-muesli-combo.jpg",
+      "alt": "Talbina–Muesli Combo",
+      "width": 1920,
+      "height": 1280
+    }
+  ],
+  "price": 94900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "1500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 1500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-02",
+    "fm-09",
+    "fm-18"
+  ],
+  "seoTitle": "Talbina & Muesli Combo – 1500g | Fit Monk",
+  "seoDescription": "Shop Fit Monk Talbina & Muesli Combo 1500g. Combines Elaichi Badam Talbina, Chocolate Badam Talbina, and Dryfruits Muesli. Order easily via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Component weights and “and more” are unresolved."
+  ],
+  "orderable": false,
+  "kind": "bundle",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 5, item 19",
+    "raw": {
+      "sourceName": "1500g TALBINA-MUESLI COMBO",
+      "cardPricePaise": 94900,
+      "compareAtPricePaise": null,
+      "description": "It contains Elaichi Badam Talbina, Chocolate Badam Talbina & Dryfruits Muesli worth rupees 375+375+375 and more.",
+      "text": "1500g TALBINA-MUESLI COMBO\n₹949.00\nIt  contains  Elaichi  Badam  Talbina,  Chocolate  Badam  Talbina  &  Dryfruits\nMuesli worth rupees 375+375+375 and more."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What products make up the Talbina & Muesli Combo?",
+      "answer": "The bundle brings together Elaichi Badam Talbina, Chocolate Badam Talbina, and Dryfruits Muesli."
+    },
+    {
+      "question": "How does this bundle help meal planning?",
+      "answer": "It provides both warm cooked barley porridge and ready-to-eat muesli cereal for varied family breakfasts throughout the week."
+    }
+  ]
+}

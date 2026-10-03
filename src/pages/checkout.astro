@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import Icon from '../components/ui/Icon.astro';
+---
+<BaseLayout title={`Checkout | ${site.brandName}`} description="Fast, simple 3-step checkout for your Fit Monk order." robots="noindex,follow" bodyClass="page-checkout">
+  <!-- Compact Modern Progress Strip -->
+  <div class="checkout-top-strip">
+    <div class="checkout-progress-inner">
+      <div class="progress-meta-row">
+        <a href="/cart/" class="checkout-back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
+          Bag
+        </a>
+        <div class="step-progress-meta">
+          <span class="step-count-label" data-step-indicator-num>Step 1 of 3</span>
+          <span class="step-meta-sep">·</span>
+          <strong class="step-name-label" data-step-indicator-title>Your details</strong>
+        </div>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" data-progress-fill style="width: 33.3%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compact Checkout Intro (~40px) -->
+  <div class="checkout-compact-header">
+    <h1 class="checkout-title" data-checkout-page-title>Your details</h1>
+    <p class="checkout-subtitle" data-checkout-subtitle>A couple of details for delivery</p>
+  </div>
+
+  <div class="checkout-layout">
+    <!-- Progressive 3-Step Flow -->
+    <div class="checkout-flow">
+      <form id="checkout-form" data-checkout class="checkout-form" novalidate>
+        <input type="hidden" name="country" value="India" />
+
+        <!-- STEP 1: YOUR DETAILS -->
+        <section class="checkout-step-card active" data-step-card="1" id="step-1-card">
+          <!-- Active Card Header -->
+          <div class="step-active-header">
+            <span class="step-num-badge">1</span>
+            <h2 class="step-card-heading">Your details</h2>
+          </div>
+
+          <!-- Upcoming Muted Indicator (shown when step > 1 and this is upcoming) -->
+          <div class="step-upcoming-pill">
+            <span class="upcoming-badge">1</span>
+            <span class="upcoming-label">Your details</span>
+          </div>
+
+          <!-- Completed Collapsed Summary Card -->
+          <div class="step-completed-card" data-step-summary="1" hidden>
+            <div class="completed-info">
+              <div class="completed-label"><span class="check-icon">✓</span> Your details</div>
+              <div class="completed-data"><strong data-summary-name></strong> <span class="summary-sep">·</span> <span data-summary-phone></span></div>
+            </div>
+            <button type="button" class="btn-step-edit" data-edit-step="1">Edit</button>
+          </div>
+
+          <!-- Active Form Body -->
+          <div class="step-body" data-step-body="1">
+            <div class="form-fields-compact">
+              <label class="field-label">
+                <span>Full name <span class="required-star">*</span></span>
+                <input name="name" autocomplete="name" required maxlength="100" placeholder="e.g. Abdul Malik" />
+                <span class="field-error" data-error="name" hidden>Please enter your name.</span>
+              </label>
+              <label class="field-label">
+                <span>Mobile number <span class="required-star">*</span></span>
+                <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="10-digit mobile number" />
+                <span class="field-error" data-error="phone" hidden>Please enter a valid mobile number.</span>
+              </label>
+            </div>
+            <div class="step-action-row desktop-only">
+              <button type="button" class="button button-continue" data-continue-step="1">Continue →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 2: DELIVERY ADDRESS -->
+        <section class="checkout-step-card disabled" data-step-card="2" id="step-2-card">
+          <!-- Active Card Header -->
+          <div class="step-active-header">
+            <span class="step-num-badge">2</span>
+            <h2 class="step-card-heading">Delivery address</h2>
+          </div>
+
+          <!-- Upcoming Muted Indicator -->
+          <div class="step-upcoming-pill">
+            <span class="upcoming-badge">2</span>
+            <span class="upcoming-label">Delivery address</span>
+          </div>
+
+          <!-- Completed Collapsed Summary Card -->
+          <div class="step-completed-card" data-step-summary="2" hidden>
+            <div class="completed-info">
+              <div class="completed-label"><span class="check-icon">✓</span> Delivery address</div>
+              <div class="completed-data"><span data-summary-address></span> <span class="summary-sep">·</span> <span data-summary-city-pin></span></div>
+            </div>
+            <button type="button" class="btn-step-edit" data-edit-step="2">Edit</button>
+          </div>
+
+          <!-- Active Form Body -->
+          <div class="step-body" data-step-body="2" hidden>
+            <div class="form-fields-compact">
+              <!-- PIN Code FIRST -->
+              <label class="field-label">
+                <span>PIN code <span class="required-star">*</span></span>
+                <div class="pin-input-container">
+                  <input name="pinCode" inputmode="numeric" autocomplete="postal-code" pattern="[1-9][0-9]{5}" maxlength="6" placeholder="6-digit PIN code" required />
+                  <span class="pin-spinner" data-pin-loading hidden aria-label="Detecting city"></span>
+                </div>
+                <span class="field-error" data-error="pinCode" hidden>Please enter a valid 6-digit PIN code.</span>
+              </label>
+
+              <!-- Auto-filled Location Pill: Agra · Uttar Pradesh ✓ [Change] -->
+              <div class="pin-detected-pill" data-pin-detected-row hidden>
+                <div class="detected-location-wrap">
+                  <span class="detected-location-name" data-detected-location-text></span>
+                  <span class="detected-check">✓</span>
+                </div>
+                <button type="button" class="btn-change-location" data-edit-location>Change</button>
+              </div>
+
+              <!-- City and State (auto-filled, hidden by default if auto-filled, editable on tap) -->
+              <div class="form-grid city-state-grid" data-city-state-row hidden>
+                <label class="field-label">
+                  <span>City <span class="required-star">*</span></span>
+                  <input name="city" autocomplete="address-level2" required maxlength="100" placeholder="City" />
+                  <span class="field-error" data-error="city" hidden>Please enter your city.</span>
+                </label>
+                <label class="field-label">
+                  <span>State <span class="required-star">*</span></span>
+                  <input name="state" autocomplete="address-level1" required maxlength="100" placeholder="State" />
+                  <span class="field-error" data-error="state" hidden>Please enter your state.</span>
+                </label>
+              </div>
+
+              <!-- Address Textarea -->
+              <label class="field-label">
+                <span>Address <span class="required-star">*</span></span>
+                <textarea name="address" autocomplete="street-address" rows="2" required maxlength="500" placeholder="House no., street, area"></textarea>
+                <span class="field-error" data-error="address" hidden>Please enter your delivery address.</span>
+              </label>
+
+              <!-- Optional Additional Details -->
+              <div class="optional-toggles">
+                <button type="button" class="text-toggle-btn" data-toggle-trigger="more-address">
+                  + Add apartment / landmark
+                </button>
+                <div class="optional-field-box" data-toggle-target="more-address" hidden>
+                  <label class="field-label">
+                    <span>Apartment / Floor / Landmark <span class="optional-tag">Optional</span></span>
+                    <input name="apartment" maxlength="200" placeholder="e.g. 3rd Floor, Near City Mall" />
+                  </label>
+                  <label class="field-label">
+                    <span>Order Note <span class="optional-tag">Optional</span></span>
+                    <textarea name="note" rows="2" maxlength="500" placeholder="Any special packaging or delivery instructions?"></textarea>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-action-row desktop-only">
+              <button type="button" class="button button-continue" data-continue-step="2">Review order →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 3: REVIEW & ORDER -->
+        <section class="checkout-step-card disabled" data-step-card="3" id="step-3-card">
+          <!-- Active Card Header -->
+          <div class="step-active-header">
+            <span class="step-num-badge">3</span>
+            <h2 class="step-card-heading">Review order</h2>
+          </div>
+
+          <!-- Upcoming Muted Indicator -->
+          <div class="step-upcoming-pill">
+            <span class="upcoming-badge">3</span>
+            <span class="upcoming-label">Review &amp; order</span>
+          </div>
+
+          <div class="step-body" data-step-body="3" hidden>
+            <!-- Compact Customer & Delivery Card -->
+            <div class="review-details-card">
+              <div class="review-details-content">
+                <div class="review-line review-main-line">
+                  <strong data-review-name>—</strong> <span class="recap-sep">·</span> <span data-review-phone>—</span>
+                </div>
+                <div class="review-line review-sub-line">
+                  <span data-review-address>—</span>, <span data-review-city-pin>—</span>
+                </div>
+                <div data-review-note class="review-line recap-note" hidden></div>
+              </div>
+              <button type="button" class="btn-step-edit mini" data-edit-step="1">Edit</button>
+            </div>
+
+            <!-- Compact Order Items & Totals -->
+            <div class="review-order-card">
+              <div data-review-items class="compact-review-items">
+                <!-- Dynamically populated from cart -->
+              </div>
+
+              <div class="review-totals-list">
+                <div class="review-total-row">
+                  <span>Subtotal</span>
+                  <strong data-review-subtotal>₹0</strong>
+                </div>
+                <div class="review-total-row">
+                  <span>Shipping</span>
+                  <strong data-review-shipping>To be confirmed</strong>
+                </div>
+                <div class="review-total-row review-grand-total">
+                  <span>Total</span>
+                  <strong data-review-total>₹0</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp guidance notice -->
+            <div class="order-whatsapp-notice">
+              <Icon name="chat" size={16} />
+              <span>Order opens directly in WhatsApp with seller to confirm stock &amp; dispatch.</span>
+            </div>
+
+            <!-- Primary Action on Desktop -->
+            <div class="step-action-row desktop-only">
+              <button type="submit" data-checkout-submit class="button button-whatsapp-primary" disabled>
+                Place Order on WhatsApp <Icon name="arrow" size={18} />
+              </button>
+            </div>
+
+            <p data-checkout-status role="status" aria-live="polite" class="checkout-status-msg"></p>
+
+            <details data-message-preview hidden class="checkout-preview-details">
+              <summary>View message preview</summary>
+              <pre></pre>
+              <a data-whatsapp-link class="text-link" target="_blank" rel="noopener noreferrer">Open WhatsApp again ↗</a>
+            </details>
+          </div>
+        </section>
+      </form>
+    </div>
+
+    <!-- Desktop Sticky Sidebar Order Summary -->
+    <aside class="checkout-summary desktop-only">
+      <h2>Your order</h2>
+      <div data-cart-content="checkout">Loading your bag…</div>
+    </aside>
+  </div>
+
+  <!-- Mobile Sticky Bottom Order Bar -->
+  <div class="checkout-mobile-sticky-bar" id="checkout-mobile-bar" hidden>
+    <div class="sticky-bar-info">
+      <span class="sticky-label">TOTAL</span>
+      <strong class="sticky-amount" data-sticky-total>₹0</strong>
+    </div>
+    <button type="button" class="button button-sticky" data-sticky-action>Continue →</button>
+  </div>
+</BaseLayout>

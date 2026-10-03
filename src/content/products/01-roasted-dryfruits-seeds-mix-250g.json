@@ -1,0 +1,107 @@
+{
+  "id": "fm-01",
+  "catalogNumber": 1,
+  "slug": "roasted-dryfruits-seeds-mix-250g",
+  "name": "Roasted Dryfruits and Seeds Mix – 250g",
+  "sourceName": "Roasted dryfruits and seeds mix 250g",
+  "displayName": "Roasted Dryfruits and Seeds Mix – 250g",
+  "shortName": null,
+  "category": "seeds-nuts-snack-mixes",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Roasted Dryfruits and Seeds Mix is a crunchy snack blend of roasted cashew nuts, almonds, mixed seeds, and dehydrated fruits. Packed in a 250g pouch, this dry fruit and seed mix provides a ready-to-eat option for daily pantry snacking or topping breakfast bowls.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/01-roasted-dryfruits-seeds-mix.jpg",
+      "alt": "Roasted Dryfruits and Seeds Mix",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 29900,
+  "compareAtPrice": 39900,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": "DFMIX250",
+  "ingredients": [
+    "Roasted cashew nuts",
+    "Almonds",
+    "Seeds",
+    "Dehydrated fruits"
+  ],
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": {
+    "amount": 4900,
+    "freeShippingThreshold": null,
+    "freeShipping": false,
+    "chargeBasis": "per-line",
+    "thresholdBasis": null,
+    "weightBands": null,
+    "reviewNotes": [],
+    "catalogMode": "order-under-1kg"
+  },
+  "shippingText": "This is 250g pack of Dry fruits likes roasted cashew, almonds, Seeds and dehydrated fruits. + ₹49 shipping on orders under 1 kg. Code: DFMIX250.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": true,
+  "variants": [],
+  "relatedProducts": [
+    "fm-02",
+    "fm-03"
+  ],
+  "seoTitle": "Roasted Dryfruits and Seeds Mix – 250g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Roasted Dryfruits and Seeds Mix 250g online. A crunchy mix of roasted cashew nuts, almonds, seeds and dehydrated fruits. Order via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "seeds-and-mixes",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 1, item 1",
+    "raw": {
+      "sourceName": "Roasted dryfruits and seeds mix 250g",
+      "cardPricePaise": 29900,
+      "compareAtPricePaise": 39900,
+      "description": "This is 250g pack of Dry fruits likes roasted cashew, almonds, Seeds and dehydrated fruits. + ₹49 shipping on orders under 1 kg. Code: DFMIX250.",
+      "text": "Roasted dryfruits and seeds mix 250g\n₹299.00   (was ₹399.00)\nThis  is  250g  pack  of  Dry  fruits  likes  roasted  cashew,  almonds,  Seeds  and\ndehydrated fruits. + ₹49 shipping on orders under 1 kg. Code: DFMIX250.",
+      "imageReview": "Catalog artwork contains unverified nutrition/health claims; withheld from display pending review.",
+      "catalogImages": [
+        {
+          "src": "/images/products/catalog-1-960.webp",
+          "alt": "Roasted Dryfruits and Seeds Mix — catalog image",
+          "width": 470,
+          "height": 569,
+          "sources": [
+            {
+              "src": "/images/products/catalog-1-320.webp",
+              "width": 320
+            },
+            {
+              "src": "/images/products/catalog-1-960.webp",
+              "width": 470
+            }
+          ]
+        }
+      ]
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What ingredients are in the Roasted Dryfruits and Seeds Mix?",
+      "answer": "According to the Fit Monk catalog, this 250g mix includes roasted cashew nuts, almonds, mixed seeds, and dehydrated fruits."
+    },
+    {
+      "question": "How is this mix packaged and shipped?",
+      "answer": "It comes in a 250g sealed pouch. The catalog lists a ₹49 delivery charge for orders under 1kg."
+    },
+    {
+      "question": "How does this compare with the 5 Seeds Mix?",
+      "answer": "The Roasted Dryfruits and Seeds Mix contains roasted nuts and dehydrated fruits in addition to seeds, whereas the 5 Seeds Mix consists entirely of five whole seeds."
+    }
+  ]
+}

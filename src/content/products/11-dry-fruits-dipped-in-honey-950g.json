@@ -1,0 +1,71 @@
+{
+  "id": "fm-11",
+  "catalogNumber": 11,
+  "slug": "dry-fruits-dipped-in-honey-950g",
+  "name": "Dry Fruits Dipped in Honey – 950g",
+  "sourceName": "Dry fruits dipped in honey 950g",
+  "displayName": "Dry Fruits Dipped in Honey – 950g",
+  "shortName": null,
+  "category": "honey-dryfruits",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Dry Fruits Dipped in Honey features a selection of whole dry fruits and crunchy seeds steeped in pure Kashmiri honey. Packed in a generous 950g jar, this honey-nut mix offers a sweet, wholesome treat for spooning over desserts, spreading on warm toast, or enjoying straight from the jar.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/11-dryfruits-dipped-in-honey.jpg",
+      "alt": "Dry Fruits Dipped in Honey",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 79900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "950g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 950,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-24"
+  ],
+  "seoTitle": "Dry Fruits Dipped in Honey – 950g | Fit Monk",
+  "seoDescription": "Order Fit Monk Dry Fruits Dipped in Honey 950g. Wholesome mixed dry fruits and seeds steeped in Kashmiri honey. Easy WhatsApp ordering and delivery.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Equivalence with the 500g honey product is unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "honey-dryfruits",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 3, item 11",
+    "raw": {
+      "sourceName": "Dry fruits dipped in honey 950g",
+      "cardPricePaise": 79900,
+      "compareAtPricePaise": null,
+      "description": "Acts as a natural energy booster. Dry fruits and seeds dipped in Kashmiri honey is a delicious and nutritious treat.",
+      "text": "Dry fruits dipped in honey 950g\n₹799.00\nActs  as  a  natural  energy  booster.  Dry  fruits  and  seeds  dipped  in  Kashmiri\nhoney is a delicious and nutritious treat."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What type of honey is used?",
+      "answer": "The catalog states that dry fruits and seeds are dipped in genuine Kashmiri honey."
+    },
+    {
+      "question": "Is this product suitable for infants?",
+      "answer": "No. In accordance with public health guidance (such as CDC guidelines), honey should never be given to infants under 12 months of age."
+    }
+  ]
+}

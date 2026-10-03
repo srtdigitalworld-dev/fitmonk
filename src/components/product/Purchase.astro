@@ -1,0 +1,80 @@
+---
+import type { Product } from '../../lib/product-schema';
+import { formatMoney } from '../../lib/utils/format';
+import { site } from '../../data/site';
+import Icon from '../ui/Icon.astro';
+interface Props { product: Product; compact?: boolean }
+const { product: p, compact = false } = Astro.props;
+const selected = p.variants[0] ?? p;
+const canAdd = p.orderable && selected.price !== null && selected.available !== false;
+const inquiry = `https://wa.me/${site.whatsappOrderNumber}?text=${encodeURIComponent(`Please confirm the price, pack and contents for ${p.name}. Catalog item ${p.catalogNumber}.`)}`;
+---
+<form data-purchase={p.id} class:list={['purchase',{'purchase-compact':compact}]}>
+  <div class="pack-slot">
+    {p.variants.length > 0 ? (
+      <label class="pack-selector-label">
+        <span class="pack-slot-legend">Pack Size</span>
+        <select name="variant" aria-label={`Pack for ${p.name}`}>
+          {p.variants.map(v => (
+            <option value={v.id}>
+              {v.packSize}{v.price === null ? ' — price to be confirmed' : ''}
+            </option>
+          ))}
+        </select>
+      </label>
+    ) : (
+      <div class="pack-static-slot">
+        <span class="pack-slot-legend">Pack Size</span>
+        <div class="pack-static-badge">{p.packSize ?? 'Single Pack'}</div>
+      </div>
+    )}
+  </div>
+
+  <div class="price-container">
+    <p class="price" class:list={[{ 'price-unconfirmed': selected.price === null }]}>
+      <strong data-price>{selected.price === null ? 'Price to be confirmed' : formatMoney(selected.price)}</strong>
+      <del data-compare hidden={selected.compareAtPrice === null || selected.price === null || selected.compareAtPrice <= selected.price}>
+        {selected.compareAtPrice === null ? '' : formatMoney(selected.compareAtPrice)}
+      </del>
+    </p>
+  </div>
+
+  {!compact && (
+    <span class="saving" data-discount hidden={selected.price === null || selected.compareAtPrice === null || selected.compareAtPrice <= selected.price}>
+      {selected.price !== null && selected.compareAtPrice !== null ? `Save ${formatMoney(selected.compareAtPrice-selected.price)}` : ''}
+    </span>
+  )}
+
+  <div class="purchase-actions">
+    {!compact && (
+      <div class="purchase-quantity">
+        <label for={`qty-${p.id}`}>Quantity</label>
+        <div class="quantity-stepper">
+          <button type="button" data-adjust="-1" aria-label="Decrease quantity">−</button>
+          <input id={`qty-${p.id}`} name="quantity" type="number" min="1" max="99" step="1" value="1" required />
+          <button type="button" data-adjust="1" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+    )}
+    {p.orderable ? (
+      <button class:list={['button', {'button-add-cart': canAdd, 'button-confirm': !canAdd}]} type="submit" disabled={!canAdd}>
+        <Icon name={canAdd ? "bag" : "chat"} size={17} />
+        <span>{canAdd ? 'Add to Cart' : 'Price to be confirmed'}</span>
+      </button>
+    ) : (
+      <a class="button button-confirm" href={inquiry} target="_blank" rel="noopener noreferrer">
+        <Icon name="chat" size={17} />
+        <span>Confirm contents</span>
+      </a>
+    )}
+  </div>
+
+  {!compact && (!p.orderable || p.variants.some(v => v.price === null)) && (
+    <a class="pdp-inquiry-link" href={inquiry} target="_blank" rel="noopener noreferrer">
+      <Icon name="chat" size={16} /> Have a question about this product? Inquire on WhatsApp
+    </a>
+  )}
+
+  <p data-purchase-status class="status" role="status" aria-live="polite"></p>
+</form>
+

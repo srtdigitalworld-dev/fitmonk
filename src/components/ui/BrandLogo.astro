@@ -1,0 +1,5 @@
+---
+import { site } from '../../data/site';
+interface Props { footer?: boolean }
+---
+<a href="/" class:list={['brand-logo',{ 'brand-logo-footer': Astro.props.footer }]} aria-label={`${site.brandName} home`}><img src={site.business.logo!} width="1774" height="887" alt={site.brandName} decoding="async" /></a>

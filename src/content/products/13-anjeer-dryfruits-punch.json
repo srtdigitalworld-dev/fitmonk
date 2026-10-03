@@ -1,0 +1,78 @@
+{
+  "id": "fm-13",
+  "catalogNumber": 13,
+  "slug": "anjeer-dryfruits-punch",
+  "name": "Anjeer Dryfruits Punch – 450g",
+  "sourceName": "ANJEER DRYFRUITS PUNCH | 450 G",
+  "displayName": "Anjeer Dryfruits Punch – 450g",
+  "shortName": null,
+  "category": "dried-fruits-fruit-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Anjeer Dryfruits Punch combines dried figs (anjeer) and assorted dry fruits into a dense, chewy sweet confection. Prepared in a 450g pack with a ₹200 discount offer when buying two packs, this traditional fig punch delivers authentic nutty flavour and distinctive fig crunch.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/13-anjeer-dryfruits-punch.jpg",
+      "alt": "Anjeer Dryfruits Punch",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 69900,
+  "compareAtPrice": 70000,
+  "currency": "INR",
+  "packSize": "450g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 450,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-05",
+    "fm-10",
+    "fm-12"
+  ],
+  "seoTitle": "Anjeer Dryfruits Punch – 450g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Anjeer Dryfruits Punch 450g. Traditional fig and nut confection offering rich, chewy sweetness. Enjoy multi-pack savings via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "anjeer-and-dried-fruits",
+  "promotions": [
+    {
+      "variantId": null,
+      "quantity": 2,
+      "total": 119800,
+      "freeShipping": false
+    }
+  ],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 4, item 13",
+    "raw": {
+      "sourceName": "ANJEER DRYFRUITS PUNCH | 450 G",
+      "cardPricePaise": 69900,
+      "compareAtPricePaise": 70000,
+      "description": "Get 200 off on 2 packs. Anjeer Punch: a guilt-free delight. Indulge in the rich, nutty flavor of anjeer and dry fruits.",
+      "text": "ANJEER DRYFRUITS PUNCH | 450 G\n₹699.00   (was ₹700.00)\nGet 200 off on 2 packs. Anjeer Punch: a guilt-free delight. Indulge in the rich,\nnutty flavor of anjeer and dry fruits."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What ingredients are highlighted in Anjeer Punch?",
+      "answer": "The catalog highlights the rich, nutty flavor of dried figs (anjeer) combined with assorted dry fruits bound into a sweet roll format."
+    },
+    {
+      "question": "How does it differ from Dates Punch?",
+      "answer": "Anjeer Punch is led by dried figs which provide a characteristic fig crunch, whereas Dates Punch uses a base of dates."
+    }
+  ]
+}

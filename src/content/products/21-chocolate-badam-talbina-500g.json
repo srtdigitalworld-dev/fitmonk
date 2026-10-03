@@ -1,0 +1,73 @@
+{
+  "id": "fm-21",
+  "catalogNumber": 21,
+  "slug": "chocolate-badam-talbina-500g",
+  "name": "Chocolate Badam Talbina – 500g",
+  "sourceName": "500g Chocolate Badam Talbina",
+  "displayName": "Chocolate Badam Talbina – 500g",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "talbina",
+  "additionalCategories": [],
+  "description": "Fit Monk Chocolate Badam Talbina blends finely milled barley flour with cocoa chocolate and almonds. In a handy 500g pack, this comforting porridge cooks quickly with warm milk to create a rich, lightly chocolatey breakfast that combines traditional barley goodness with contemporary flavor.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/21-chocolate-badam-talbina.jpg",
+      "alt": "Chocolate Badam Talbina — 500g",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 37500,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-22",
+    "fm-04",
+    "fm-14"
+  ],
+  "seoTitle": "Chocolate Badam Talbina – 500g | Fit Monk",
+  "seoDescription": "Order Fit Monk Chocolate Badam Talbina 500g. Hearty barley porridge powder with chocolate cocoa and almonds. Easy order confirmation via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Composition equivalence with Chocolate Badam Dates Talbina is unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 6, item 21",
+    "raw": {
+      "sourceName": "500g Chocolate Badam Talbina",
+      "cardPricePaise": 37500,
+      "compareAtPricePaise": null,
+      "description": "Talbina is a warm and nourishing porridge made with barley, milk, and typically sweetened with honey.",
+      "text": "500g Chocolate Badam Talbina\n₹375.00\nTalbina  is  a  warm  and  nourishing  porridge  made  with  barley,  milk,  and\ntypically sweetened with honey."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What makes Chocolate Badam Talbina popular?",
+      "answer": "It offers the wholesome benefits of traditional barley porridge while incorporating cocoa and almonds, making it especially appealing for children and breakfast porridge lovers."
+    },
+    {
+      "question": "How is it served?",
+      "answer": "Simmer gently with milk, stir continuously until thickened, and serve warm with a drizzle of honey if desired."
+    }
+  ]
+}

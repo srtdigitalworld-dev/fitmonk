@@ -1,0 +1,131 @@
+{
+  "id": "fm-07",
+  "catalogNumber": 7,
+  "slug": "ajwa-dates",
+  "name": "Saudi Ajwa Dates – 250g",
+  "sourceName": "250g Saudi Ajwa Dates Premium",
+  "displayName": "Saudi Ajwa Dates – 250g",
+  "shortName": null,
+  "category": "dates-date-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Saudi Ajwa Dates are celebrated dark dates renowned for their soft texture, fine wrinkled skin, and gentle sweetness. Sourced from Saudi Arabia and available in 250g, 500g, and 1kg pack options, these Ajwa khajoor dates are popular for daily eating, gifting, and Ramadan fasting.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/07-saudi-ajwa-dates.jpg",
+      "alt": "Saudi Ajwa Dates",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": null,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "Saudi Ajwa Premium Dates | 250g: 449 + 60 shipping, 500g: 849 + 60 shipping, 1000g: 1550.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": false,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": null,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": 6000,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 84900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 6000,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 155000,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": null
+    }
+  ],
+  "relatedProducts": [
+    "fm-06",
+    "fm-08",
+    "fm-15"
+  ],
+  "seoTitle": "Saudi Ajwa Dates – 250g | Fit Monk",
+  "seoDescription": "Buy genuine Saudi Ajwa Dates 250g from Fit Monk. Soft, dark Ajwa khajoor available in 250g, 500g, and 1kg packs. Simple, direct ordering via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "250g card price ₹499 conflicts with description price ₹449."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "dates-and-khajoor",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 2, item 7",
+    "raw": {
+      "sourceName": "250g Saudi Ajwa Dates Premium",
+      "cardPricePaise": 49900,
+      "compareAtPricePaise": null,
+      "description": "Saudi Ajwa Premium Dates | 250g: 449 + 60 shipping, 500g: 849 + 60 shipping, 1000g: 1550.",
+      "text": "250g Saudi Ajwa Dates Premium\n₹499.00\nSaudi  Ajwa  Premium  Dates  |  250g:  449  +  60  shipping,  500g:  849  +  60\nshipping, 1000g: 1550."
+    },
+    "conflicts": [
+      {
+        "field": "price:250g",
+        "values": [
+          "₹499 card",
+          "₹449 description"
+        ],
+        "note": "Do not select either price without confirmation."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What makes Ajwa dates distinctive?",
+      "answer": "Ajwa dates are known for their dark brown to black color, fine wrinkled texture, soft bite, and mild, fruity sweetness."
+    },
+    {
+      "question": "What pack options are listed for Saudi Ajwa Dates?",
+      "answer": "The catalog lists 250g, 500g, and 1000g packs. The 250g price is subject to final seller confirmation."
+    }
+  ]
+}

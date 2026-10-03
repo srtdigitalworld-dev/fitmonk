@@ -1,0 +1,78 @@
+{
+  "id": "fm-12",
+  "catalogNumber": 12,
+  "slug": "dates-dry-fruits-punch",
+  "name": "Dates Dry Fruits Punch – 450g",
+  "sourceName": "DATES DRY FRUITS PUNCH | 450g",
+  "displayName": "Dates Dry Fruits Punch – 450g",
+  "shortName": null,
+  "category": "dried-fruits-fruit-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Dates Dry Fruits Punch is an artisanal Indian sweet snack crafted from roasted nuts bound together with rich, natural dates. Sliced into ready-to-eat squares in a 450g pack, this date punch offers a firm, chewy texture and nutty flavor without relying on artificial fillers.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/12-dates-dryfruits-punch.jpg",
+      "alt": "Dates Dry Fruits Punch",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 59900,
+  "compareAtPrice": 60000,
+  "currency": "INR",
+  "packSize": "450g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 450,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-05",
+    "fm-10",
+    "fm-13"
+  ],
+  "seoTitle": "Dates Dry Fruits Punch – 450g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Dates Dry Fruits Punch 450g. Roasted nuts bound with rich dates into an Indian sweet roll. Multi-pack offers available via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "anjeer-and-dried-fruits",
+  "promotions": [
+    {
+      "variantId": null,
+      "quantity": 2,
+      "total": 99800,
+      "freeShipping": false
+    }
+  ],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 3, item 12",
+    "raw": {
+      "sourceName": "DATES DRY FRUITS PUNCH | 450g",
+      "cardPricePaise": 59900,
+      "compareAtPricePaise": 60000,
+      "description": "Get 200 off on two packs. Short and Sweet: Dates Punch — a guilt-free delight of roasted nuts bound together.",
+      "text": "DATES DRY FRUITS PUNCH | 450g\n₹599.00   (was ₹600.00)\nGet  200  off  on  two  packs.  Short  and  Sweet:  Dates  Punch  —  a  guilt-free\ndelight of roasted nuts bound together."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What does \"punch\" mean in this product?",
+      "answer": "In Indian confectionery and the Fit Monk catalog, \"punch\" refers to a solid, sliced sweet block made of roasted nuts bound with fruit paste (dates), not a beverage."
+    },
+    {
+      "question": "Is there a multi-pack discount?",
+      "answer": "Yes, the catalog notes an offer of ₹200 off when ordering two packs."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+---
+import type { Product } from '../../lib/product-schema';
+import ProductImage from './ProductImage.astro';
+import Purchase from './Purchase.astro';
+interface Props { product: Product }
+const { product } = Astro.props;
+---
+<article class="product-card" data-product-card data-search-name={product.name.toLowerCase()}>
+  <a class="product-image-link" href={`/product/${product.slug}/`} tabindex="-1" aria-hidden="true">
+    <ProductImage product={product} />
+    <span class="product-card-label">Catalog product</span>
+  </a>
+  <div class="product-card-body">
+    <h2 class="product-card-title">
+      <a href={`/product/${product.slug}/`}>{product.name}</a>
+    </h2>
+    <Purchase product={product} compact />
+    <a class="product-details-link" href={`/product/${product.slug}/`}>
+      <span>Product details</span>
+      <span class="details-arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>
+

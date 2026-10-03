@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output & framework caches
+dist/
+.astro/
+.wrangler/
+.cloudflare/
+
+# Environment configurations
+.env
+.env.*
+!.env.example
+
+# Test & development output
+test-results/
+output/
+tmp/
+
+# Large master video files (kept locally, excluded from Git and Cloudflare Pages deployment)
+public/video/hero/fit-monk-hero-40s-4k.mp4
+public/video/hero/*-4k.mp4
+
+# Editor and agent state
+.vscode/
+.idea/
+.kilo/
+.kilocode/
+
+# Logs and system files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+

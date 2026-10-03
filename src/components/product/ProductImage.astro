@@ -1,0 +1,13 @@
+---
+import type { Product } from '../../lib/product-schema';
+import { site } from '../../data/site';
+import CollectionArt from '../ui/CollectionArt.astro';
+interface Props { product: Product; eager?: boolean }
+const { product, eager = false } = Astro.props;
+const image = product.images[0];
+const imgSrc = image ? encodeURI(image.src) : undefined;
+const srcset = image?.sources && image.sources.length > 0 ? image.sources.map(s => `${encodeURI(s.src)} ${s.width}w`).join(', ') : undefined;
+---
+<div class="product-image">
+{image ? <img src={imgSrc} srcset={srcset} sizes={srcset ? (eager ? '(max-width: 600px) 92vw, 50vw' : '(max-width: 600px) 46vw, (max-width: 800px) 30vw, 300px') : undefined} width={image.width} height={image.height} alt={image.alt} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : 'auto'} decoding="async" /> : <div class="image-placeholder" role="img" aria-label={`Product photography pending for ${product.name}`}><img class="placeholder-logo" src={site.business.logo!} alt="" width="1774" height="887" loading="lazy" /><CollectionArt kind={product.category ?? ''} /><span>Photography coming soon</span></div>}
+</div>

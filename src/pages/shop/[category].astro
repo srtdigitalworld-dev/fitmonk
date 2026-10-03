@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/product/ProductCard.astro';
+import { categories } from '../../data/categories';
+import { site } from '../../data/site';
+import { getProducts } from '../../lib/catalog';
+import { inCategory, introductions } from '../../lib/taxonomy';
+import Breadcrumbs from '../../components/navigation/Breadcrumbs.astro';
+export function getStaticPaths() { return categories.map(category => ({ params: { category: category.slug }, props: { category } })); }
+const { category } = Astro.props;
+const products = (await getProducts()).filter(p => inCategory(p.data, category.slug));
+const children = categories.filter(c => c.parent === category.slug);
+---
+<BaseLayout title={`${category.name} | ${site.brandName}`} description={introductions[category.slug]}><Breadcrumbs items={[{name:'Home',path:'/'},{name:'Shop',path:'/shop/'},...(category.parent ? [{name:'Breakfast',path:'/shop/breakfast/'}]:[]),{name:category.name,path:`/shop/${category.slug}/`}]} /><div class="page-heading category-heading"><p class="eyebrow">The collection</p><h1>{category.name}</h1><p>{introductions[category.slug]}</p></div>{children.length > 0 && <nav class="category-chips" aria-label="Subcategories">{children.map(c => <a href={`/shop/${c.slug}/`}>{c.name}</a>)}</nav>}<div class="shop-toolbar"><p>{products.length} catalog products</p><a class="text-link" href="/shop/">Explore all products ↗</a></div><div class="product-grid">{products.map(p => <ProductCard product={p.data} />)}</div></BaseLayout>

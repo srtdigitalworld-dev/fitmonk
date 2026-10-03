@@ -1,0 +1,12 @@
+---
+interface Props { kind: string }
+const {kind} = Astro.props;
+const isDates=kind.includes('dates');
+const isHoney=kind.includes('honey');
+const isBundle=kind.includes('combo');
+---
+<!-- Decorative category illustrations, not product or packaging representations. -->
+<svg viewBox="0 0 160 130" class="collection-art" fill="none" aria-hidden="true">
+  <ellipse cx="80" cy="113" rx="49" ry="7" fill="currentColor" opacity=".07" />
+  {isHoney ? <><path d="M54 37h52v63q0 10-26 10t-26-10Z" fill="var(--color-yellow)" opacity=".55"/><path d="M54 37h52v63q0 10-26 10t-26-10Z" stroke="currentColor" stroke-width="2"/><rect x="52" y="26" width="56" height="12" rx="4" fill="var(--color-brown)" opacity=".8"/><path d="M80 51c-18 24-17 32 0 32s18-8 0-32Z" fill="var(--color-orange)" opacity=".65"/><path d="m111 10 20 17m-20-10 14 15" stroke="var(--color-brown)" stroke-width="5" stroke-linecap="round"/></> : isBundle ? <><path d="m35 45 45-22 45 22v49l-45 20-45-20Z" fill="var(--color-yellow)" opacity=".25"/><path d="m35 45 45-22 45 22v49l-45 20-45-20V45Zm0 0 45 21 45-21M80 66v48M57 34l46 21v23" stroke="currentColor" stroke-width="2"/><path d="m80 23-8-11c-9-13-24 2-5 10l13 1Zm0 0 8-11c9-13 24 2 5 10l-13 1Z" stroke="var(--color-red)" stroke-width="2"/></> : <><path d="M28 69h104c-4 33-22 42-52 42S32 102 28 69Z" fill="var(--color-yellow)" opacity=".45"/><path d="M28 69h104c-4 33-22 42-52 42S32 102 28 69Z" stroke="currentColor" stroke-width="2"/><ellipse cx="80" cy="68" rx="52" ry="12" fill="var(--color-surface)" stroke="currentColor" stroke-width="2"/>{[0,1,2,3,4].map((i)=><g transform={`translate(${42+i*18} ${60-(i%2)*12}) rotate(${i%2 ? -25 : 25})`}><ellipse rx={isDates?10:7} ry={isDates?15:10} fill={isDates?'var(--color-brown)':'var(--color-orange)'} opacity={isDates?.75:.35}/><path d="M0-7v14" stroke="currentColor" stroke-width="1" opacity=".5"/></g>)}<path d="m114 44 19-23M119 47l19-23" stroke="var(--color-brown)" stroke-width="3" stroke-linecap="round"/></>}
+</svg>

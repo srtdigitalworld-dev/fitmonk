@@ -1,0 +1,135 @@
+{
+  "id": "fm-15",
+  "catalogNumber": 15,
+  "slug": "kalmi-dates",
+  "name": "Kalmi Dates – 250g",
+  "sourceName": "250g Kalmi Dates",
+  "displayName": "Kalmi Dates – 250g",
+  "shortName": null,
+  "category": "dates-date-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Kalmi Dates (often recognized as Safawi dates) are dark, cylindrical dates from Saudi Arabia known for their pleasantly chewy texture and balanced sweetness. Available in 250g, 500g, and 1kg packs, these Kalmi khajoor dates are well-suited for everyday snacking, breaking fasts, and family sharing.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/15-kalmi-dates.jpg",
+      "alt": "Kalmi Dates",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 24900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "Saudi Kalmi dates, free shipping. 250g: 249 + 60 shipping, 500g: 449 + 60 shipping, 1000g: 849.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": false,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": 24900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": null,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [
+          "Free shipping conflicts with ₹60."
+        ],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 44900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": null,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [
+          "Free shipping conflicts with ₹60."
+        ],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 84900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": null
+    }
+  ],
+  "relatedProducts": [
+    "fm-06",
+    "fm-07",
+    "fm-08"
+  ],
+  "seoTitle": "Kalmi Dates – 250g | Fit Monk",
+  "seoDescription": "Order Saudi Kalmi Dates 250g from Fit Monk. Dark, chewy Kalmi khajoor dates available in 250g, 500g, and 1kg packs. Fast ordering via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Shipping says both free and ₹60 for small packs."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "dates-and-khajoor",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 4, item 15",
+    "raw": {
+      "sourceName": "250g Kalmi Dates",
+      "cardPricePaise": 24900,
+      "compareAtPricePaise": null,
+      "description": "Saudi Kalmi dates, free shipping. 250g: 249 + 60 shipping, 500g: 449 + 60 shipping, 1000g: 849.",
+      "text": "250g Kalmi Dates\n₹249.00\nSaudi Kalmi dates, free shipping. 250g: 249 + 60 shipping, 500g: 449 + 60\nshipping, 1000g: 849."
+    },
+    "conflicts": [
+      {
+        "field": "shipping",
+        "values": [
+          "free shipping",
+          "250g/500g + ₹60"
+        ],
+        "note": "Shipping to be confirmed."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What are Kalmi dates?",
+      "answer": "Kalmi dates are a popular dark, medium-sized date variety from Saudi Arabia (frequently known in markets as Safawi), prized for their firm chew and moderate sweetness."
+    },
+    {
+      "question": "What pack sizes are available?",
+      "answer": "Kalmi dates are available in 250g, 500g, and 1000g packs with tiered delivery terms."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import JsonLd from '../components/seo/JsonLd.astro';
+import { articleSchema } from '../lib/seo/schema';
+import { site } from '../data/site';
+interface Props { article: CollectionEntry<'articles'>['data'] }
+const { article } = Astro.props;
+---
+<BaseLayout title={`${article.title} | ${site.brandName}`} description={article.description} type="article">
+  <JsonLd slot="head" data={articleSchema(article)} /><article><h1>{article.title}</h1><slot /></article>
+</BaseLayout>

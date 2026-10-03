@@ -1,0 +1,7 @@
+---
+import CollectionArt from './CollectionArt.astro';
+import Icon from './Icon.astro';
+interface Props { name: string; slug: string; count?: number }
+const {name,slug,count} = Astro.props;
+---
+<a class="collection-card" href={`/shop/${slug}/`}><div class="collection-circle"><CollectionArt kind={slug} /></div><h3>{name}</h3>{count !== undefined && <span>{count} catalog products</span>}<span class="collection-arrow"><Icon name="arrow" size={16} /></span></a>

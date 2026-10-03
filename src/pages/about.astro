@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import CollectionArt from '../components/ui/CollectionArt.astro';
+---
+<BaseLayout title={`About | ${site.brandName}`} description="About Fit Monk and ordering from our catalog."><div class="content-page"><div class="page-heading"><p class="eyebrow">Meet Fit Monk</p><h1>A little variety.<br />A more personal way to shop.</h1><p>Explore our 24-product catalog across seed mixes, breakfast, dates, dried fruits, honey dryfruits and combos.</p></div><div class="story-layout"><div class="story-visual"><CollectionArt kind="seeds-nuts-snack-mixes" /></div><div><h2>A pantry to make your own.</h2><p>Browse by collection, compare the catalog-listed packs and choose what suits your pantry.</p><p>Your order starts here and continues as a conversation on WhatsApp. The seller confirms availability, delivery and payment arrangements manually.</p><a class="button" href="/shop/">Explore the catalog →</a></div></div><section class="contact-panel"><p class="eyebrow">Clear details. Personal ordering.</p><h2>Have a question before you choose?</h2><p>Where product information or shipping is incomplete, we mark it clearly. Ask us for confirmation before ordering.</p><a class="text-link" href="/contact/">Get in touch ↗</a></section></div></BaseLayout>

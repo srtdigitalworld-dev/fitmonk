@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+import { learnHubs } from '../../lib/taxonomy';
+const articles = await getCollection('articles', a => !a.data.draft);
+---
+<BaseLayout title={`Learn | ${site.brandName}`} description="Explore the planned Fit Monk food guides and label-reading topics."><div class="content-page"><div class="page-heading"><p class="eyebrow">A little food for thought</p><h1>Get to know<br />your everyday pantry.</h1><p>Our food guide library is being prepared. Explore the planned topics below; no articles have been published yet.</p></div><div class="learn-grid">{learnHubs.map(([id,name],i)=><section id={id} class="learn-topic"><p class="eyebrow">0{i+1} · Coming to the library</p><h2>{name}</h2><p>Content will follow source verification and editorial review.</p></section>)}</div>{articles.map(a => <p><a href={`/learn/${a.data.slug}/`}>{a.data.title}</a></p>)}</div></BaseLayout>

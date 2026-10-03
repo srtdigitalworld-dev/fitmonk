@@ -1,0 +1,101 @@
+{
+  "id": "fm-10",
+  "catalogNumber": 10,
+  "slug": "dried-fruits-cocktail",
+  "name": "Dried Fruits Cocktail – 500g",
+  "sourceName": "Dried Fruits Cocktail, 500g",
+  "displayName": "Dried Fruits Cocktail – 500g",
+  "shortName": null,
+  "category": "dried-fruits-fruit-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Dried Fruits Cocktail is a colorful medley of diced, dehydrated fruits offering a naturally sweet, chewy fruit snack. Available in 500g and 1kg packs, this fruit blend can be eaten directly as a sweet snack or mixed into oatmeal, muesli, yogurt, and festive baked dishes.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/10-dried-fruits-cocktail.jpg",
+      "alt": "Dried Fruits Cocktail",
+      "width": 1616,
+      "height": 1568
+    }
+  ],
+  "price": 49900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "Dried fruits cocktail for kids and young ones, one kg is for 849 free shipping.",
+  "weightGrams": 500,
+  "available": null,
+  "featured": true,
+  "variants": [
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 49900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": null
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 84900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    }
+  ],
+  "relatedProducts": [
+    "fm-05",
+    "fm-12",
+    "fm-13"
+  ],
+  "seoTitle": "Dried Fruits Cocktail – 500g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Dried Fruits Cocktail 500g. A delicious mix of dehydrated fruits in 500g and 1kg packs. Convenient order confirmation via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "anjeer-and-dried-fruits",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 3, item 10",
+    "raw": {
+      "sourceName": "Dried Fruits Cocktail, 500g",
+      "cardPricePaise": 49900,
+      "compareAtPricePaise": null,
+      "description": "Dried fruits cocktail for kids and young ones, one kg is for 849 free shipping.",
+      "text": "Dried Fruits Cocktail, 500g\n₹499.00\nDried fruits cocktail for kids and young ones, one kg is for 849 free shipping."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is in the Dried Fruits Cocktail?",
+      "answer": "It contains a blend of diced dehydrated fruits, offering a sweet and chewy snack suitable for toppings and baking."
+    },
+    {
+      "question": "What pack sizes are available?",
+      "answer": "It is offered in 500g and 1000g (1kg) packs. The 1kg pack includes free catalog shipping."
+    }
+  ]
+}

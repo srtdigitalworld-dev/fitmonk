@@ -1,0 +1,73 @@
+{
+  "id": "fm-09",
+  "catalogNumber": 9,
+  "slug": "health-combo",
+  "name": "Health Combo – 1500g",
+  "sourceName": "1500g Health Combo",
+  "displayName": "Health Combo – 1500g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "The Fit Monk Health Combo is a 1500g multi-product breakfast and snack bundle. Confirmed components include 500g of Fit Monk Dryfruits Muesli and 500g of Fit Monk Honey Dryfruits, providing both morning breakfast cereal and honey-coated nuts. Remaining pack contents are subject to seller confirmation.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/09-health-combo.jpg",
+      "alt": "Health Combo",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 107500,
+  "compareAtPrice": 119900,
+  "currency": "INR",
+  "packSize": "1500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 1500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-02",
+    "fm-18",
+    "fm-19"
+  ],
+  "seoTitle": "Health Combo – 1500g | Fit Monk",
+  "seoDescription": "Fit Monk Health Combo 1500g bundle featuring 500g Dryfruits Muesli and 500g Honey Dryfruits. Inquire with seller via WhatsApp for full bundle details.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Incomplete bundle: the two named 500g packs do not account for the stated 1500g."
+  ],
+  "orderable": false,
+  "kind": "bundle",
+  "learnHub": "labels-allergens-and-storage",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 3, item 9",
+    "raw": {
+      "sourceName": "1500g Health Combo",
+      "cardPricePaise": 107500,
+      "compareAtPricePaise": 119900,
+      "description": "From 1 April, it's for 1075. It contains 500g of FIT MONK muesli, 500g of FIT MONK Honey dryfruits and more.",
+      "text": "1500g Health Combo\n₹1,075.00   (was ₹1,199.00)\nFrom 1 April, it's for 1075. It contains 500g of FIT MONK muesli, 500g of FIT\nMONK Honey dryfruits and more."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What confirmed products are in the Health Combo?",
+      "answer": "The catalog confirms 500g of Fit Monk Muesli and 500g of Fit Monk Honey Dryfruits within the 1500g total weight."
+    },
+    {
+      "question": "Why is this combo inquiry-only?",
+      "answer": "Because the catalog states \"and more\" for the remaining component weight, we recommend confirming the exact contents directly with the seller before ordering."
+    }
+  ]
+}

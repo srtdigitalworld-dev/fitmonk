@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Your cart | ${site.brandName}`} description="Review your selected Fit Monk products and packs." robots="noindex,follow"><div class="page-heading cart-page-heading"><p class="eyebrow">Your Fit Monk order</p><h1>Shopping bag.</h1><p>Review your products, packs and quantities before checkout.</p></div><div data-cart-content="full" class="full-cart"><p>Loading your bag…</p></div><a href="/shop/" class="text-link continue-shopping">← Continue shopping</a></BaseLayout>

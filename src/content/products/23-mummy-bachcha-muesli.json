@@ -1,0 +1,73 @@
+{
+  "id": "fm-23",
+  "catalogNumber": 23,
+  "slug": "mummy-bachcha-muesli",
+  "name": "Mummy Bachcha Muesli – 500g",
+  "sourceName": "500G Mummy Bachcha Muesli",
+  "displayName": "Mummy Bachcha Muesli – 500g",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "muesli",
+  "additionalCategories": [],
+  "description": "Fit Monk Mummy Bachcha Muesli is a dedicated 500g breakfast cereal blend featuring wholesome rolled grains, seeds, and dried fruit bits. Crafted for quick morning meals, it can be served chilled with milk or layered with yogurt, fruit slices, and honey for the family breakfast table.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/23-mummy-bachcha-muesli.jpg",
+      "alt": "Mummy Bachcha Muesli",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 39900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-04",
+    "fm-14",
+    "fm-16"
+  ],
+  "seoTitle": "Mummy Bachcha Muesli – 500g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Mummy Bachcha Muesli 500g online. Delicious breakfast grain cereal blend with seeds and fruit bits. Order easily via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Mummy Bachcha is a catalog name, not a verified age-suitability claim."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "muesli-breakfast",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 6, item 23",
+    "raw": {
+      "sourceName": "500G Mummy Bachcha Muesli",
+      "cardPricePaise": 39900,
+      "compareAtPricePaise": null,
+      "description": "Muesli is a nutritious and versatile breakfast option.",
+      "text": "500G Mummy Bachcha Muesli\n₹399.00\nMuesli is a nutritious and versatile breakfast option."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is Mummy Bachcha Muesli?",
+      "answer": "It is a 500g breakfast cereal blend from Fit Monk described in the catalog as a nutritious and versatile morning option."
+    },
+    {
+      "question": "How should this muesli be served?",
+      "answer": "It can be enjoyed with cold milk, warm milk, or stirred into fresh yogurt with sliced fresh fruits."
+    }
+  ]
+}

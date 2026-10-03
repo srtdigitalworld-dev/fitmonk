@@ -1,0 +1,133 @@
+{
+  "id": "fm-05",
+  "catalogNumber": 5,
+  "slug": "turkish-anjeer",
+  "name": "Turkish Anjeer – 250g",
+  "sourceName": "Turkish anjeer | 250g",
+  "displayName": "Turkish Anjeer – 250g",
+  "shortName": null,
+  "category": "dried-fruits-fruit-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Turkish Anjeer offers whole dried figs sourced from Turkey, selected for their naturally sweet taste, round shape, and chewy texture. Available in 250g, 500g, and 1000g packs, these dried figs can be enjoyed as a dry fruit snack or soaked in clean water overnight for traditional consumption.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/05-turkish-anjeer.jpg",
+      "alt": "Turkish Anjeer",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 44900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "Turkish anjeer 250g: 449 + 60 shipping, 500g: 849 + 60 shipping, 1000g: 1575 + free shipping.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": true,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": 44900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": 6000,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 84900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 6000,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 157500,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    }
+  ],
+  "relatedProducts": [
+    "fm-10",
+    "fm-12",
+    "fm-13"
+  ],
+  "seoTitle": "Turkish Anjeer – 250g | Fit Monk",
+  "seoDescription": "Buy authentic Turkish Anjeer 250g online from Fit Monk. Premium whole dried figs available in 250g, 500g, and 1kg packs. Fast order confirmation via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "anjeer-and-dried-fruits",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 2, item 5",
+    "raw": {
+      "sourceName": "Turkish anjeer | 250g",
+      "cardPricePaise": 44900,
+      "compareAtPricePaise": null,
+      "description": "Turkish anjeer 250g: 449 + 60 shipping, 500g: 849 + 60 shipping, 1000g: 1575 + free shipping.",
+      "text": "Turkish anjeer | 250g\n₹449.00\nTurkish  anjeer  250g:  449  +  60  shipping,  500g:  849  +  60  shipping,  1000g:\n1575 + free shipping."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is anjeer?",
+      "answer": "Anjeer is the traditional Hindi and Persian term for the common fig (Ficus carica), widely enjoyed dried as a nutritious pantry fruit."
+    },
+    {
+      "question": "How are Turkish dried figs typically eaten?",
+      "answer": "They can be eaten as a chewy snack directly from the pack, soaked in water overnight, or chopped into desserts, porridge, and fruit salads."
+    },
+    {
+      "question": "What pack sizes are available?",
+      "answer": "Available in 250g, 500g, and 1000g packs. The 1000g pack includes free catalog shipping."
+    }
+  ]
+}

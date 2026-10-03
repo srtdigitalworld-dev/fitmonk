@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+import { categories } from '../data/categories';
+import { getProducts } from '../lib/catalog';
+import { inCategory } from '../lib/taxonomy';
+import ProductCard from '../components/product/ProductCard.astro';
+import CollectionCard from '../components/ui/CollectionCard.astro';
+import CollectionArt from '../components/ui/CollectionArt.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Icon from '../components/ui/Icon.astro';
+const products=(await getProducts()).map(p=>p.data);
+const medjool=products.find(p=>p.catalogNumber===8)!;
+const cocktail=products.find(p=>p.catalogNumber===10)!;
+const collections=categories.filter(c=>c.slug!=='breakfast');
+---
+<BaseLayout>
+  <section class="home-hero">
+    <div class="hero-video-bg">
+      <video autoplay muted loop playsinline preload="metadata" aria-label="Fit Monk hero video">
+        {/* Production asset architecture: web-optimized formats (WebM/MP4) will precede master reference */}
+        <source src="/video/hero/fit-monk-hero-40s-4k.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"><span class="tiny-sun" aria-hidden="true">✳</span> The Fit Monk pantry</p>
+      <h1>Premium foods.<br /><em>Made easy to shop.</em></h1>
+      <p class="hero-desc">Explore seed mixes, breakfast favourites, dates and dryfruits. Compare verified packs and prices, then confirm your order personally.</p>
+      <div class="hero-actions">
+        <a class="button button-hero-primary" href="/shop/">Shop 24 products <Icon name="arrow" size={18} /></a>
+        <a class="hero-secondary-link" href="#collections">Shop by category ↗</a>
+      </div>
+    </div>
+  </section>
+  <div class="service-strip"><span><Icon name="box" />Packs to suit your pantry</span><span><Icon name="bag" />24 catalog products</span><span><Icon name="chat" />Order through WhatsApp</span></div>
+  <section class="section category-section" id="collections"><SectionHeading eyebrow="Shop by category" title="Find your Fit Monk favourites." /><div class="collections-grid">{collections.map(c=><CollectionCard name={c.name} slug={c.slug} count={products.filter(p=>inCategory(p,c.slug)).length} />)}</div></section>
+  <section class="section featured-section"><SectionHeading eyebrow="Popular places to start" title="Shop pantry favourites." href="/shop/" linkText="Shop all products" /><div class="product-grid">{products.filter(p=>[3,5,8,10].includes(p.catalogNumber!)).map(p=><ProductCard product={p} />)}</div></section>
+  <section class="section collection-feature breakfast-feature"><div class="feature-copy"><p class="eyebrow">The breakfast collection</p><h2>A new start<br />to your <em>morning.</em></h2><p>Explore muesli and Talbina, from individual packs to breakfast combinations.</p><a class="button button-secondary" href="/shop/breakfast/">Explore breakfast <Icon name="arrow" size={18} /></a></div><div class="breakfast-art"><CollectionArt kind="muesli" /><span class="art-caption">MUESLI · TALBINA · BREAKFAST COMBOS</span></div><div class="feature-links"><a href="/shop/muesli/"><span>01</span><strong>Muesli</strong><Icon name="arrow" /></a><a href="/shop/talbina/"><span>02</span><strong>Talbina</strong><Icon name="arrow" /></a><a href="/shop/combos-bundles/"><span>03</span><strong>Combos</strong><Icon name="arrow" /></a></div></section>
+  <section class="section"><SectionHeading eyebrow="For your breakfast shelf" title="Find your morning mix." href="/shop/breakfast/" /><div class="product-grid">{products.filter(p=>[4,14,21,23].includes(p.catalogNumber!)).map(p=><ProductCard product={p} />)}</div></section>
+  <section class="section twin-collections"><a class="editorial-collection dates-collection" href="/shop/dates-date-sweets/"><div><p class="eyebrow">Dates &amp; date sweets</p><h2>A little sweetness.<br />Plenty to discover.</h2><span class="text-link">Explore the dates collection ↗</span></div><img src={encodeURI(medjool.images[0]!.src)} width={medjool.images[0]!.width} height={medjool.images[0]!.height} alt={medjool.images[0]!.alt} loading="lazy" /></a><a class="editorial-collection fruit-collection" href="/shop/dried-fruits-fruit-sweets/"><div><p class="eyebrow">Dried fruits &amp; fruit sweets</p><h2>Bring a little<br />variety to your day.</h2><span class="text-link">Discover dried fruits ↗</span></div><img src={encodeURI(cocktail.images[0]!.src)} width={cocktail.images[0]!.width} height={cocktail.images[0]!.height} alt={cocktail.images[0]!.alt} loading="lazy" /></a></section>
+  <section class="section why-section"><div class="why-intro"><p class="eyebrow">The Fit Monk way</p><h2>Good choices start<br />with clear details.</h2><a class="text-link" href="/about/">Get to know Fit Monk ↗</a></div><div class="why-item"><Icon name="bag" size={28} /><h3>Find your pack</h3><p>Compare the catalog-listed sizes and prices before choosing.</p></div><div class="why-item"><Icon name="check" size={28} /><h3>Know what’s confirmed</h3><p>Unconfirmed product details and shipping are clearly marked.</p></div><div class="why-item"><Icon name="chat" size={28} /><h3>Keep it personal</h3><p>Talk to the seller to confirm availability and your order.</p></div></section>
+  <section class="section"><SectionHeading eyebrow="A little food for thought" title="There’s more to explore." href="/learn/" linkText="Visit Learn" /><div class="guide-grid">{[['01','Seeds & mixes','seeds-and-mixes'],['02','Muesli & breakfast','muesli-breakfast'],['03','Labels & ingredients','labels-allergens-and-storage']].map(([n,title,id])=><a class="guide-card" href={`/learn/#${id}`}><span class="guide-number">{n}</span><div><p class="eyebrow">Upcoming food guides</p><h3>{title}</h3><p>Our guide library is being prepared.</p></div><Icon name="arrow" /></a>)}</div></section>
+  <section class="section whatsapp-banner"><div class="whatsapp-symbol"><Icon name="chat" size={36} /></div><div><p class="eyebrow">A real conversation, a personal order</p><h2>Your pantry. Your picks. Let’s talk.</h2><p>Need a product detail or shipping charge confirmed? We’re a message away.</p></div><a class="button" href={`https://wa.me/${site.whatsappOrderNumber}`} target="_blank" rel="noopener noreferrer">Chat on WhatsApp <Icon name="arrow" size={18} /></a></section>
+</BaseLayout>

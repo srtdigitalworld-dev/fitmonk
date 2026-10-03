@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import JsonLd from '../components/seo/JsonLd.astro';
+import { productJsonLd, faqJsonLd } from '../lib/seo/schema';
+import type { Product } from '../lib/product-schema';
+import { site } from '../data/site';
+import { formatMoney } from '../lib/utils/format';
+import Breadcrumbs from '../components/navigation/Breadcrumbs.astro';
+import ProductImage from '../components/product/ProductImage.astro';
+import ProductCard from '../components/product/ProductCard.astro';
+import Purchase from '../components/product/Purchase.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Icon from '../components/ui/Icon.astro';
+import { categories } from '../data/categories';
+import { getProducts } from '../lib/catalog';
+import { learnGuideMap } from '../lib/taxonomy';
+interface Props { product: Product }
+const {product:p}=Astro.props;
+const family=categories.find(c=>c.slug===p.category)!;
+const sub=categories.find(c=>c.slug===p.subcategory);
+const guide=learnGuideMap[p.learnHub];
+const crumbs=[{name:'Home',path:'/'},{name:'Shop',path:'/shop/'},{name:family.name,path:`/shop/${family.slug}/`},...(sub?[{name:sub.name,path:`/shop/${sub.slug}/`}]:[]),{name:p.name,path:`/product/${p.slug}/`}];
+const related=(await getProducts()).filter(entry=>p.relatedProducts.includes(entry.data.id));
+---
+<BaseLayout title={p.seoTitle??`${p.name} | ${site.brandName}`} description={p.seoDescription??p.description??site.defaultDescription} socialImage={p.images[0]?.src}>
+  {p.orderable && <JsonLd slot="head" data={productJsonLd(p)} />}
+  {p.faqs && p.faqs.length > 0 && <JsonLd slot="head" data={faqJsonLd(p.faqs)} />}
+  <Breadcrumbs items={crumbs} />
+  <div class="product-layout"><div class="product-gallery"><ProductImage product={p} eager /><p class="gallery-caption">{p.images.length?'Official Fit Monk product photograph.':'A dedicated space for the final product photograph.'}</p></div><div class="product-buy-panel"><a href={`/shop/${sub?.slug??family.slug}/`} class="eyebrow">{sub?.name??family.name}</a><h1>{p.name}</h1><p class="product-intro">{p.description}</p><Purchase product={p} /><a class="button button-secondary product-whatsapp" href="/cart/"><Icon name="chat" size={18} /> Order through WhatsApp</a>{p.available!==null && <p class="stock-status">{p.available?'Available':'Currently unavailable'}</p>}<div class="purchase-notes"><p><Icon name="chat" size={18} />Availability confirmed personally by the seller.</p><p><Icon name="box" size={18} />Shipping calculated where confirmed, otherwise quoted by the seller.</p></div></div></div>
+  <div class="product-information"><div><h2>A closer look.</h2><p>Catalog details, pack options and what to confirm before ordering.</p><a class="text-link" href="/contact/">Have a question? Ask us ↗</a></div><div class="product-accordions">
+  <details open><summary><h2>Product Details</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.description}</p><p class="catalog-name">Catalog name: {p.sourceName}</p>{p.sku && <p>Catalog code: <strong>{p.sku}</strong></p>}{p.reviewNotes.map(note=><p class="notice">{note}</p>)}{p.variants.length>0 && <div class="table-wrap"><table><caption>Catalog pack options</caption><thead><tr><th>Pack</th><th>Price</th><th>Code</th></tr></thead><tbody>{p.variants.map(v=><tr><td>{v.packSize}</td><td>{v.price===null?'To be confirmed':formatMoney(v.price)}</td><td>{v.sku??'Not supplied'}</td></tr>)}</tbody></table></div>}{p.promotions.map(o=><p class="catalog-offer">Catalog offer: {o.quantity} packs{o.variantId?` (${p.variants.find(v=>v.id===o.variantId)?.packSize})`:''} for {formatMoney(o.total)}{o.freeShipping?', with free shipping':''}. Applied only to this exact quantity.</p>)}</div></details>
+  {p.ingredients && <details><summary><h2>Ingredients &amp; What's Included</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.ingredients.join(', ')}.</p></div></details>}
+  {p.allergens && <details><summary><h2>Allergens</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.allergens.join(', ')}</p></div></details>}
+  {p.nutrition && <details><summary><h2>Nutrition</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.nutrition.basis}</p>{p.nutrition.values.map(v=><p>{v.name}: {v.value} {v.unit}</p>)}</div></details>}
+  {p.storage && <details><summary><h2>Storage &amp; Handling</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.storage}</p></div></details>}
+  <details><summary><h2>Shipping &amp; Ordering</h2> <Icon name="chevron" size={18} /></summary><div><p>{p.shipping?.catalogMode==='order-under-1kg'?'The catalog lists ₹49 shipping on orders under 1kg. Other quantities and combinations may require seller confirmation.':'Shipping depends on the selected pack and order. Where the catalog is incomplete or conflicting, checkout will show “Shipping to be confirmed”.'}</p>{p.variants.some(v=>v.shipping&&!v.shipping.reviewNotes.length)&&<ul>{p.variants.filter(v=>v.shipping&&!v.shipping.reviewNotes.length).map(v=><li>{v.packSize}: {v.shipping!.freeShipping?'free shipping for the listed pack':v.shipping!.amount!==null?`${formatMoney(v.shipping!.amount!)} shipping for the listed pack`:'to be confirmed'}</li>)}</ul>}<p>Your order is sent through WhatsApp and confirmed manually. No payment is collected on this website.</p></div></details>
+  {p.faqs && p.faqs.length > 0 && <details><summary><h2>Frequently Asked Questions</h2> <Icon name="chevron" size={18} /></summary><div class="faq-list">{p.faqs.map(faq=><div class="faq-item"><p class="faq-question"><strong>{faq.question}</strong></p><p class="faq-answer">{faq.answer}</p></div>)}</div></details>}
+  {[9,11,20,24].includes(p.catalogNumber??0)&&<p class="notice">Honey must not be given to children younger than 12 months. <a href="https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html">Read CDC guidance</a>.</p>}
+  </div></div>
+  <section class="section"><SectionHeading eyebrow={family.name} title="More for your pantry." href={`/shop/${family.slug}/`} linkText={`Browse all ${family.name}`} /><div class="product-grid">{related.map(entry=><ProductCard product={entry.data} />)}</div></section><div class="product-learn-note"><Icon name="leaf" /><p>Curious about this food in your pantry? <a class="text-link" href={`/learn/#${p.learnHub}`}>{guide?.linkText ?? 'Explore our upcoming food guides'} ↗</a></p></div>
+</BaseLayout>

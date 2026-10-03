@@ -1,0 +1,82 @@
+{
+  "id": "fm-20",
+  "catalogNumber": 20,
+  "slug": "jumbo-health-combo",
+  "name": "Jumbo Health Combo – 2950g",
+  "sourceName": "2950g JUMBO Health Combo",
+  "displayName": "Jumbo Health Combo – 2950g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "The Fit Monk Jumbo Health Combo is our largest pantry bundle, providing 2,950g of essentials: 1000g Fit Monk Dryfruits Muesli, 950g Honey Dipped Dry Fruits, and 1000g Badam Elaichi Talbina. A comprehensive supply offering breakfast porridge, cereal, and honey-coated nut snacks for the entire family.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/20-jumbo-health-combo.jpg",
+      "alt": "Jumbo Health Combo",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 177300,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "2950g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 2950,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-02",
+    "fm-09",
+    "fm-18"
+  ],
+  "seoTitle": "Jumbo Health Combo – 2950g | Fit Monk",
+  "seoDescription": "Fit Monk Jumbo Health Combo 2950g. Generous family bundle with 1kg Muesli, 950g Honey Dryfruits, and 1kg Badam Elaichi Talbina. WhatsApp ordering.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Listed weights already total 2950g; “and more” is unresolved."
+  ],
+  "orderable": false,
+  "kind": "bundle",
+  "learnHub": "labels-allergens-and-storage",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 5, item 20",
+    "raw": {
+      "sourceName": "2950g JUMBO Health Combo",
+      "cardPricePaise": 177300,
+      "compareAtPricePaise": null,
+      "description": "It contains 1000g of FIT MONK muesli, 950g of FIT MONK Honey dryfruits and 1000g of FIT MONK badam Elaichi and more.",
+      "text": "2950g JUMBO Health Combo\n₹1,773.00\nIt contains 1000g of FIT MONK muesli, 950g of FIT MONK Honey dryfruits and\n1000g of FIT MONK badam Elaichi and more."
+    },
+    "conflicts": [
+      {
+        "field": "contents",
+        "values": [
+          "1000g + 950g + 1000g = 2950g",
+          "and more"
+        ],
+        "note": "Confirm full component list and weight."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is included in the Jumbo Health Combo?",
+      "answer": "The bundle contains 1000g Fit Monk Muesli, 950g Fit Monk Honey Dryfruits, and 1000g Badam Elaichi Talbina, totaling 2,950g."
+    },
+    {
+      "question": "Is honey in this bundle suitable for infants?",
+      "answer": "No. The included honey dryfruits must not be given to children under 12 months."
+    }
+  ]
+}

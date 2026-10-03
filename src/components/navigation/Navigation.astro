@@ -1,0 +1,11 @@
+---
+import { categories } from '../../data/categories';
+import Icon from '../ui/Icon.astro';
+const path = Astro.url.pathname;
+const current = (href: string) => href === '/shop/' ? path.startsWith('/shop/') || path.startsWith('/product/') : path.startsWith(href);
+---
+<nav aria-label="Main navigation" class="desktop-nav">
+  <a href="/shop/" aria-current={current('/shop/') ? 'page' : undefined}>Shop</a><details class="category-menu"><summary>Categories <Icon name="chevron" size={14} /></summary><div><p class="eyebrow">Shop the Fit Monk pantry</p>{categories.map(c => <a href={`/shop/${c.slug}/`}>{c.name}<Icon name="arrow" size={15} /></a>)}</div></details>
+  <a href="/learn/" aria-current={current('/learn/') ? 'page' : undefined}>Learn</a><a href="/about/" aria-current={current('/about/') ? 'page' : undefined}>About</a><a href="/contact/" aria-current={current('/contact/') ? 'page' : undefined}>Contact</a>
+</nav>
+<div class="header-actions"><a class="cart-trigger icon-button" href="/cart/" data-open-cart aria-label="Open shopping bag" aria-haspopup="dialog"><Icon name="bag" size={23} /><span class="cart-badge" data-cart-count hidden>0</span></a><details class="mobile-menu"><summary class="icon-button" aria-label="Open navigation menu"><Icon name="menu" size={24} /><span class="sr-only">Menu</span></summary><nav aria-label="Mobile navigation"><a href="/shop/">Shop all products <Icon name="arrow" /></a><p class="eyebrow">Collections</p>{categories.map(c=><a class="mobile-category" href={`/shop/${c.slug}/`}>{c.name}</a>)}<div class="mobile-secondary"><a href="/learn/">Learn</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/cart/">Cart</a></div></nav></details></div>

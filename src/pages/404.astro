@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Page not found | ${site.brandName}`} description="This page could not be found." robots="noindex,follow"><div class="page-heading"><p class="eyebrow">404 · A little off the shelf</p><h1>Let’s find something good.</h1><p>This page could not be found. Your next pantry pick might be in the shop.</p></div><a class="button" href="/shop/">Back to shop →</a></BaseLayout>

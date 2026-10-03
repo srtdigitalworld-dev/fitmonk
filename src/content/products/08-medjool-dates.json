@@ -1,0 +1,135 @@
+{
+  "id": "fm-08",
+  "catalogNumber": 8,
+  "slug": "medjool-dates",
+  "name": "Medjool Dates – 250g",
+  "sourceName": "250g Jordon Medjool Dates",
+  "displayName": "Medjool Dates – 250g",
+  "shortName": null,
+  "category": "dates-date-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Medjool Dates are prized large-sized dates known for their succulent, caramel-like sweetness and tender, fleshy pulp. Listed in the catalog with 250g, 500g, and 1kg options, these Medjool khajoor dates make an indulgent everyday treat, baking ingredient, or thoughtful gift.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/08-medjool-dates.jpg",
+      "alt": "Medjool Dates",
+      "width": 1408,
+      "height": 1760
+    }
+  ],
+  "price": 44900,
+  "compareAtPrice": 49900,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": "MED250",
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "Premium Mejdool Dates | Free Shipping. 250g: 449+60 shipping, 500g: 849+60 shipping, 1000g: 1550. Code: MED250.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": false,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": "MED250",
+      "price": 44900,
+      "compareAtPrice": 49900,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": null,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [
+          "Free shipping conflicts with ₹60."
+        ],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 84900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": null,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [
+          "Free shipping conflicts with ₹60."
+        ],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 155000,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": null
+    }
+  ],
+  "relatedProducts": [
+    "fm-06",
+    "fm-07",
+    "fm-15"
+  ],
+  "seoTitle": "Medjool Dates – 250g | Fit Monk",
+  "seoDescription": "Order large, succulent Medjool Dates 250g from Fit Monk. Tender texture and caramel sweetness, available in 250g, 500g, and 1kg packs. WhatsApp ordering.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Jordon is retained in the catalog name; origin is not asserted. Shipping says both free and ₹60 for small packs."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "dates-and-khajoor",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 2, item 8",
+    "raw": {
+      "sourceName": "250g Jordon Medjool Dates",
+      "cardPricePaise": 44900,
+      "compareAtPricePaise": 49900,
+      "description": "Premium Mejdool Dates | Free Shipping. 250g: 449+60 shipping, 500g: 849+60 shipping, 1000g: 1550. Code: MED250.",
+      "text": "250g Jordon Medjool Dates\n₹449.00   (was ₹499.00)\nPremium  Mejdool  Dates  |  Free  Shipping.  250g:  449+60  shipping,  500g:\n849+60 shipping, 1000g: 1550. Code: MED250."
+    },
+    "conflicts": [
+      {
+        "field": "shipping",
+        "values": [
+          "Free Shipping",
+          "250g/500g + ₹60"
+        ],
+        "note": "Shipping to be confirmed."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How do Medjool dates taste and feel?",
+      "answer": "Medjool dates are distinctly large with a soft, moist flesh and a rich, honey-caramel flavor profile."
+    },
+    {
+      "question": "Why was the catalog name normalized?",
+      "answer": "The catalog lists \"Jordon Medjool Dates\", which represents Jordan Medjool dates. We normalize the title while retaining the catalog reference for full traceability."
+    }
+  ]
+}

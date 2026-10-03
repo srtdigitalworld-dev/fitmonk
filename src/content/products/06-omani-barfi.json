@@ -1,0 +1,71 @@
+{
+  "id": "fm-06",
+  "catalogNumber": 6,
+  "slug": "omani-barfi",
+  "name": "Omani Dates Arabic Barfi – 500g",
+  "sourceName": "Omani barfi — Premium Dates Arabic barfi | 500g",
+  "displayName": "Omani Dates Arabic Barfi – 500g",
+  "shortName": null,
+  "category": "dates-date-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Omani Dates Arabic Barfi is a rich date-and-nut confection prepared with chopped dates, mixed nuts, and pure clarified butter (desi ghee). Packed in a 500g box, this traditional Arabic-style khajoor barfi offers a dense, chewy sweet suited for festive gifting, celebrations, and after-meal desserts.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/06-omani-barfi.jpg",
+      "alt": "Omani Barfi — Dates Arabic Barfi",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 54900,
+  "compareAtPrice": 55000,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-07",
+    "fm-08",
+    "fm-15"
+  ],
+  "seoTitle": "Omani Dates Arabic Barfi – 500g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Omani Dates Arabic Barfi 500g. Traditional Arabic date sweet made with chopped dates, mixed nuts, and desi ghee. Easy WhatsApp ordering.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "dates-and-khajoor",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 2, item 6",
+    "raw": {
+      "sourceName": "Omani barfi — Premium Dates Arabic barfi | 500g",
+      "cardPricePaise": 54900,
+      "compareAtPricePaise": 55000,
+      "description": "Dates barfi in desi ghee and nuts is a decadent Arabic sweet made with chopped dates, nuts, and clarified butter.",
+      "text": "Omani barfi — Premium Dates Arabic barfi | 500g\n₹549.00   (was ₹550.00)\nDates  barfi  in  desi  ghee  and  nuts  is  a  decadent  Arabic  sweet  made  with\nchopped dates, nuts, and clarified butter."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What ingredients are used in Omani Barfi?",
+      "answer": "The catalog specifies that this Arabic sweet is made with chopped dates, mixed nuts, and clarified butter (desi ghee)."
+    },
+    {
+      "question": "What occasions is Omani Dates Barfi suited for?",
+      "answer": "With its rich date-and-ghee composition, it is commonly chosen for festive gifting, family celebrations, Ramadan iftar, and everyday sweet treats."
+    }
+  ]
+}

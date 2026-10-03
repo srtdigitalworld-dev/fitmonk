@@ -1,0 +1,73 @@
+{
+  "id": "fm-17",
+  "catalogNumber": 17,
+  "slug": "badaam-elaichi-talbina-1000g",
+  "name": "Badam Elaichi Talbina – 1kg",
+  "sourceName": "1000g Badaam Elaichi Talbina",
+  "displayName": "Badam Elaichi Talbina – 1kg",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "talbina",
+  "additionalCategories": [],
+  "description": "Fit Monk Badam Elaichi Talbina in a 1kg economy pack delivers a generous supply of traditional barley porridge powder scented with cardamom and almonds. Designed for regular household use, simply cook with milk or water and sweeten to taste for a nourishing, comforting breakfast.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/17-badaam-elaichi-talbina-1000g.jpg",
+      "alt": "Badaam Elaichi Talbina — 1000g",
+      "width": 1616,
+      "height": 1584
+    }
+  ],
+  "price": 64900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "1000g",
+  "sku": "TAL1K",
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 1000,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-04",
+    "fm-14",
+    "fm-16"
+  ],
+  "seoTitle": "Badam Elaichi Talbina – 1kg | Fit Monk",
+  "seoDescription": "Buy Fit Monk Badam Elaichi Talbina 1kg family pack. Wholesome barley porridge with cardamom and almonds. Quick order confirmation via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Generic porridge wording is not a product ingredient list. Composition equivalence with 500g is unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 5, item 17",
+    "raw": {
+      "sourceName": "1000g Badaam Elaichi Talbina",
+      "cardPricePaise": 64900,
+      "compareAtPricePaise": null,
+      "description": "Talbina is a warm and nourishing porridge made with barley, milk, and typically sweetened with honey. Code: TAL1K.",
+      "text": "1000g Badaam Elaichi Talbina\n₹649.00\nTalbina  is  a  warm  and  nourishing  porridge  made  with  barley,  milk,  and\ntypically sweetened with honey. Code: TAL1K."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is the difference between the 500g and 1kg Badam Elaichi Talbina?",
+      "answer": "Both share the same cardamom and almond barley porridge formulation; the 1kg pack offers an economical larger quantity for regular breakfast routines."
+    },
+    {
+      "question": "How should Talbina powder be stored?",
+      "answer": "Keep in a cool, dry place inside an airtight container away from direct sunlight and moisture."
+    }
+  ]
+}

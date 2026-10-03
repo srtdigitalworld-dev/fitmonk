@@ -1,0 +1,71 @@
+{
+  "id": "fm-24",
+  "catalogNumber": 24,
+  "slug": "fit-monk-honey-dryfruits-500g",
+  "name": "Fit Monk Honey Dryfruits – 500g",
+  "sourceName": "500g Fit Monk Honey dryfruits",
+  "displayName": "Fit Monk Honey Dryfruits – 500g",
+  "shortName": null,
+  "category": "honey-dryfruits",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk Honey Dryfruits (500g) brings together assorted crunchy nuts and seeds immersed in genuine Kashmiri honey. A convenient smaller jar size compared to the 950g edition, it makes an appetizing standalone treat, oatmeal mix-in, or elegant gift for festive occasions.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/24-honey-dryfruits.jpg",
+      "alt": "Fit Monk Honey Dryfruits — 500g",
+      "width": 1600,
+      "height": 1600
+    }
+  ],
+  "price": 44900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-11"
+  ],
+  "seoTitle": "Fit Monk Honey Dryfruits – 500g | Fit Monk",
+  "seoDescription": "Order Fit Monk Honey Dryfruits 500g. Crunchy mixed nuts and seeds soaked in pure Kashmiri honey. Fast order confirmation and shipping via WhatsApp.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Equivalence with the 950g honey product is unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "honey-dryfruits",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 6, item 24",
+    "raw": {
+      "sourceName": "500g Fit Monk Honey dryfruits",
+      "cardPricePaise": 44900,
+      "compareAtPricePaise": null,
+      "description": "Acts as a natural energy booster. Dry fruits and seeds dipped in Kashmiri honey is a delicious and nutritious treat.",
+      "text": "500g Fit Monk Honey dryfruits\n₹449.00\nActs  as  a  natural  energy  booster.  Dry  fruits  and  seeds  dipped  in  Kashmiri\nhoney is a delicious and nutritious treat."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is in Fit Monk Honey Dryfruits?",
+      "answer": "Assorted crunchy dry fruits and seeds steeped in natural Kashmiri honey."
+    },
+    {
+      "question": "Is this safe for infants?",
+      "answer": "No. Natural honey carries a risk of infant botulism and must never be fed to children under 1 year of age."
+    }
+  ]
+}

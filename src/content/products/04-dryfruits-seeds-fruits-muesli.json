@@ -1,0 +1,129 @@
+{
+  "id": "fm-04",
+  "catalogNumber": 4,
+  "slug": "dryfruits-seeds-fruits-muesli",
+  "name": "Fit Monk Dryfruits, Seeds & Fruits Muesli – 500g",
+  "sourceName": "500g Fit Monk Dryfruits Seeds and Fruits Super Muesli | 1000g",
+  "displayName": "Fit Monk Dryfruits, Seeds & Fruits Muesli – 500g",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "muesli",
+  "additionalCategories": [],
+  "description": "Fit Monk Dryfruits, Seeds and Fruits Muesli is a breakfast cereal combining grains with dried fruits, nuts, and seeds. Available in a 500g pack with multi-pack savings (buy two 500g packs for ₹699 with free shipping), it serves as a ready-to-eat breakfast with warm or cold milk, curd, or yogurt.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/04-super-muesli.jpg",
+      "alt": "Fit Monk Dryfruits, Seeds and Fruits Muesli",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 37500,
+  "compareAtPrice": 37600,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "500g: 375+49. DISCOUNT: BUY 2 X 500g and get 51 discount with free shipping (Price: 699). BUY 3 X 500g and more.",
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 37500,
+      "compareAtPrice": 37600,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 4900,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "2x500g",
+      "packSize": "2 × 500g",
+      "sku": null,
+      "price": 69900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g — price unconfirmed",
+      "sku": null,
+      "price": null,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": null
+    }
+  ],
+  "relatedProducts": [
+    "fm-14",
+    "fm-16",
+    "fm-17"
+  ],
+  "seoTitle": "Fit Monk Dryfruits, Seeds & Fruits Muesli – 500g | Fit Monk",
+  "seoDescription": "Order Fit Monk Dryfruits, Seeds & Fruits Muesli 500g. Wholesome breakfast muesli with dried fruits and seeds. Multi-pack offers available with direct delivery.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "The title mentions 1000g without a standalone price. BUY 3 X 500g and more has no complete offer terms."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "muesli-breakfast",
+  "promotions": [
+    {
+      "variantId": "500g",
+      "quantity": 2,
+      "total": 69900,
+      "freeShipping": true
+    }
+  ],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 1, item 4",
+    "raw": {
+      "sourceName": "500g Fit Monk Dryfruits Seeds and Fruits Super Muesli | 1000g",
+      "cardPricePaise": 37500,
+      "compareAtPricePaise": 37600,
+      "description": "500g: 375+49. DISCOUNT: BUY 2 X 500g and get 51 discount with free shipping (Price: 699). BUY 3 X 500g and more.",
+      "text": "500g  Fit  Monk  Dryfruits  Seeds  and  Fruits  Super  Muesli  |\n1000g\n₹375.00   (was ₹376.00)\n500g:  375+49.  DISCOUNT:  BUY  2  X  500g  and  get  51  discount  with  free\nshipping (Price: 699). BUY 3 X 500g and more."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "How is Fit Monk Dryfruits, Seeds and Fruits Muesli served?",
+      "answer": "It can be served with cold or warm milk, stirred into curd or yogurt, or soaked overnight as an overnight muesli bowl."
+    },
+    {
+      "question": "Are there multi-pack discount offers on this muesli?",
+      "answer": "Yes, the catalog features an offer to buy two 500g packs (1000g total) for ₹699 with free shipping."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "id": "fm-03",
+  "catalogNumber": 3,
+  "slug": "five-seeds-mix",
+  "name": "5 Seeds Mix – 250g",
+  "sourceName": "5 seeds mix 250g",
+  "displayName": "5 Seeds Mix – 250g",
+  "shortName": null,
+  "category": "seeds-nuts-snack-mixes",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Fit Monk 5 Seeds Mix is a balanced blend of five named whole seeds: flax seeds, watermelon seeds, pumpkin seeds, muskmelon seeds, and sunflower seeds, combined in equal proportions. Available in 250g, 500g, and 1000g packs, this mixed seeds blend is suited for everyday eating, smoothies, salads, and breakfast bowls.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/03-5-seeds-mix.jpg",
+      "alt": "5 Seeds Mix",
+      "width": 1408,
+      "height": 1760
+    }
+  ],
+  "price": 29900,
+  "compareAtPrice": 34900,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": [
+    "Flax seeds",
+    "Watermelon seeds",
+    "Pumpkin seeds",
+    "Muskmelon seeds",
+    "Sunflower seeds"
+  ],
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": "This 5 seeds mix has flax seeds, watermelon seeds, pumpkin seeds, muskmelon seeds and sunflower seeds. All seeds are equally mixed. Beneficial for health, full of nutritions. 250g: 299+49, 500g: 499+49, 1000g: 899+0. + ₹49 shipping on orders under 1 kg.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": true,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": 29900,
+      "compareAtPrice": 34900,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": 4900,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "order-under-1kg"
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 49900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 4900,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "order-under-1kg"
+      }
+    },
+    {
+      "id": "1000g",
+      "packSize": "1000g",
+      "sku": null,
+      "price": 89900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": "single-pack"
+      }
+    }
+  ],
+  "relatedProducts": [
+    "fm-01",
+    "fm-02"
+  ],
+  "seoTitle": "5 Seeds Mix – 250g | Fit Monk",
+  "seoDescription": "Buy Fit Monk 5 Seeds Mix 250g online. A blend of flax, watermelon, pumpkin, muskmelon, and sunflower seeds mixed in equal proportions. Order via WhatsApp.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "seeds-and-mixes",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 1, item 3",
+    "raw": {
+      "sourceName": "5 seeds mix 250g",
+      "cardPricePaise": 29900,
+      "compareAtPricePaise": 34900,
+      "description": "This 5 seeds mix has flax seeds, watermelon seeds, pumpkin seeds, muskmelon seeds and sunflower seeds. All seeds are equally mixed. Beneficial for health, full of nutritions. 250g: 299+49, 500g: 499+49, 1000g: 899+0. + ₹49 shipping on orders under 1 kg.",
+      "text": "5 seeds mix 250g\n₹299.00   (was ₹349.00)\nThis  5  seeds  mix  has  flax  seeds,  watermelon  seeds,  pumpkin  seeds,\nmuskmelon  seeds  and  sunflower  seeds.  All  seeds  are  equally  mixed.\nBeneficial for health, full of nutritions. 250g: 299+49, 500g: 499+49, 1000g:\n899+0. + ₹49 shipping on orders under 1 kg.",
+      "imageReview": "Catalog artwork contains unverified nutrition/health claims; withheld from display pending review.",
+      "catalogImages": [
+        {
+          "src": "/images/products/catalog-3-960.webp",
+          "alt": "5 Seeds Mix — catalog image",
+          "width": 457,
+          "height": 570,
+          "sources": [
+            {
+              "src": "/images/products/catalog-3-320.webp",
+              "width": 320
+            },
+            {
+              "src": "/images/products/catalog-3-960.webp",
+              "width": 457
+            }
+          ]
+        }
+      ]
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "Which five seeds are included in this mix?",
+      "answer": "Fit Monk 5 Seeds Mix contains flax seeds, watermelon seeds, pumpkin seeds, muskmelon seeds, and sunflower seeds, blended in equal proportions."
+    },
+    {
+      "question": "What pack sizes are available for 5 Seeds Mix?",
+      "answer": "It is offered in 250g, 500g, and 1000g (1kg) packs. Orders of the 1kg pack include free catalog shipping."
+    },
+    {
+      "question": "How can 5 Seeds Mix be used daily?",
+      "answer": "It can be eaten as a plain seed snack, sprinkled over oatmeal, muesli, or yogurt, or blended into morning smoothies."
+    }
+  ]
+}

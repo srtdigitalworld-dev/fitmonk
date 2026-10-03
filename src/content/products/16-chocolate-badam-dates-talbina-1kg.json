@@ -1,0 +1,73 @@
+{
+  "id": "fm-16",
+  "catalogNumber": 16,
+  "slug": "chocolate-badam-dates-talbina-1kg",
+  "name": "Chocolate Badam Dates Talbina – 1kg",
+  "sourceName": "Choclate Badam Dates Talbina | 1 kg",
+  "displayName": "Chocolate Badam Dates Talbina – 1kg",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "talbina",
+  "additionalCategories": [],
+  "description": "Fit Monk Chocolate Badam Dates Talbina combines wholesome barley porridge base with cocoa chocolate flavor, almonds, and sweet dates. Provided in a family-sized 1kg pack, this flavorful Talbina variant offers a comforting warm bowl when cooked with milk, appealing to both adults and children for breakfast.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/16-chocolate-badam-dates-talbina.jpg",
+      "alt": "Chocolate Badam Dates Talbina — 1kg",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 64900,
+  "compareAtPrice": 75000,
+  "currency": "INR",
+  "packSize": "1000g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 1000,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-04",
+    "fm-14",
+    "fm-17"
+  ],
+  "seoTitle": "Chocolate Badam Dates Talbina – 1kg | Fit Monk",
+  "seoDescription": "Buy Fit Monk Chocolate Badam Dates Talbina 1kg. Hearty barley porridge blended with cocoa, almonds, and dates. Convenient WhatsApp order confirmation.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Choclate normalized to Chocolate. Dates appears in this name but not in the 500g product; formulation equivalence unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 4, item 16",
+    "raw": {
+      "sourceName": "Choclate Badam Dates Talbina | 1 kg",
+      "cardPricePaise": 64900,
+      "compareAtPricePaise": 75000,
+      "description": "Chocolate Badam Dates Talbina, 1 kg pack.",
+      "text": "Choclate Badam Dates Talbina | 1 kg\n₹649.00   (was ₹750.00)\nChocolate Badam Dates Talbina, 1 kg pack."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What ingredients are featured in this Talbina blend?",
+      "answer": "The catalog specifically lists chocolate, badam (almonds), and dates blended into a barley porridge base."
+    },
+    {
+      "question": "How does this SKU differ from standard Chocolate Badam Talbina?",
+      "answer": "This 1kg pack is cataloged specifically with dates included in the formulation and title."
+    }
+  ]
+}

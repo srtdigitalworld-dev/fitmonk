@@ -1,0 +1,6 @@
+---
+import { getProducts } from '../../lib/catalog';
+import ProductLayout from '../../layouts/ProductLayout.astro';
+export async function getStaticPaths() { return (await getProducts()).map(p => ({ params: { slug: p.data.slug }, props: { product: p.data } })); }
+---
+<ProductLayout product={Astro.props.product} />

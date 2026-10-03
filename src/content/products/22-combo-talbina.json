@@ -1,0 +1,72 @@
+{
+  "id": "fm-22",
+  "catalogNumber": 22,
+  "slug": "combo-talbina",
+  "name": "Combo Talbina – 1000g",
+  "sourceName": "1000g Combo Talbina",
+  "displayName": "Combo Talbina – 1000g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [
+    "breakfast"
+  ],
+  "description": "The Fit Monk Combo Talbina package pairs two 500g bags: one bag of Badam Elaichi Talbina and one bag of Chocolate Badam Talbina, totaling 1kg of barley porridge. It allows you to rotate between traditional aromatic cardamom and rich cocoa flavors throughout the week.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/22-combo-talbina.jpg",
+      "alt": "Combo Talbina",
+      "width": 1616,
+      "height": 1568
+    }
+  ],
+  "price": 64900,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "1000g",
+  "sku": "ECTAL1K",
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 1000,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-14",
+    "fm-21"
+  ],
+  "seoTitle": "Combo Talbina – 1000g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Combo Talbina 1000g. Includes 500g Badam Elaichi Talbina + 500g Chocolate Badam Talbina. WhatsApp order confirmation and delivery.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "bundle",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 6, item 22",
+    "raw": {
+      "sourceName": "1000g Combo Talbina",
+      "cardPricePaise": 64900,
+      "compareAtPricePaise": null,
+      "description": "This combo has 1 bag of 500g Elaichi Badam Talbina and 1 bag of 500g Chocolate Badam Talbina. Code: ECTAL1K.",
+      "text": "1000g Combo Talbina\n₹649.00\nThis  combo  has  1  bag  of  500g  Elaichi  Badam  Talbina  and  1  bag  of  500g\nChocolate Badam Talbina. Code: ECTAL1K."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "Which packs are inside Combo Talbina?",
+      "answer": "It contains one 500g bag of Badam Elaichi Talbina and one 500g bag of Chocolate Badam Talbina (code: ECTAL1K)."
+    },
+    {
+      "question": "Can I prepare both flavors the same way?",
+      "answer": "Yes, both flavors cook easily with warm milk or water on the stove until reaching a creamy porridge consistency."
+    }
+  ]
+}

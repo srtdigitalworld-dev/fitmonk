@@ -1,0 +1,103 @@
+{
+  "id": "fm-02",
+  "catalogNumber": 2,
+  "slug": "power-snacks-combo",
+  "name": "Power Snacks Combo – 750g",
+  "sourceName": "Power snacks Comho 750g",
+  "displayName": "Power Snacks Combo – 750g",
+  "shortName": null,
+  "category": "combos-bundles",
+  "subcategory": null,
+  "additionalCategories": [
+    "seeds-nuts-snack-mixes"
+  ],
+  "description": "The Fit Monk Power Snacks Combo is a 750g snack bundle containing three separate 250g packs: one pack of Roasted Dry Fruits & Seeds Mix, one pack of Dehydrated Fruits Cocktail, and one pack of 5 Seeds Mix. This combination provides a variety of seeds, roasted nuts, and dried fruit snacks for the home or office pantry.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/02-power-snacks-combo.jpg",
+      "alt": "Power Snacks Combo",
+      "width": 1408,
+      "height": 1760
+    }
+  ],
+  "price": 74900,
+  "compareAtPrice": 89900,
+  "currency": "INR",
+  "packSize": "750g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": {
+    "amount": 4900,
+    "freeShippingThreshold": null,
+    "freeShipping": false,
+    "chargeBasis": "per-line",
+    "thresholdBasis": null,
+    "weightBands": null,
+    "reviewNotes": [],
+    "catalogMode": "order-under-1kg"
+  },
+  "shippingText": "This combo contains 1. Roasted dry fruits and Seeds mix 250g, 2. 6 Dehydrated fruits cocktail 250g, 3. 5 Seeds mix 250g. + ₹49 shipping on orders under 1 kg.",
+  "weightGrams": 750,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-09",
+    "fm-18",
+    "fm-19"
+  ],
+  "seoTitle": "Power Snacks Combo – 750g | Fit Monk",
+  "seoDescription": "Shop the Fit Monk Power Snacks Combo 750g featuring Roasted Dryfruits & Seeds Mix (250g), Dehydrated Fruits Cocktail (250g), and 5 Seeds Mix (250g). Order online.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Comho normalized to Combo; source spelling retained. Cocktail component is not confirmed equivalent to the standalone 500g product."
+  ],
+  "orderable": true,
+  "kind": "bundle",
+  "learnHub": "labels-allergens-and-storage",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 1, item 2",
+    "raw": {
+      "sourceName": "Power snacks Comho 750g",
+      "cardPricePaise": 74900,
+      "compareAtPricePaise": 89900,
+      "description": "This combo contains 1. Roasted dry fruits and Seeds mix 250g, 2. 6 Dehydrated fruits cocktail 250g, 3. 5 Seeds mix 250g. + ₹49 shipping on orders under 1 kg.",
+      "text": "Power snacks Comho 750g\n₹749.00   (was ₹899.00)\nThis  combo  contains  1.  Roasted  dry  fruits  and  Seeds  mix  250g,  2.  6\nDehydrated  fruits  cocktail  250g,  3.  5  Seeds  mix  250g.  +  ₹49  shipping  on\norders under 1 kg.",
+      "imageReview": "Catalog artwork contains unverified nutrition/health claims; withheld from display pending review.",
+      "catalogImages": [
+        {
+          "src": "/images/products/catalog-2-960.webp",
+          "alt": "Power Snacks Combo — catalog image",
+          "width": 455,
+          "height": 567,
+          "sources": [
+            {
+              "src": "/images/products/catalog-2-320.webp",
+              "width": 320
+            },
+            {
+              "src": "/images/products/catalog-2-960.webp",
+              "width": 455
+            }
+          ]
+        }
+      ]
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What packs are included in the Power Snacks Combo?",
+      "answer": "The 750g combo includes three 250g packs: Roasted Dry Fruits and Seeds Mix (250g), Dehydrated Fruits Cocktail (250g), and 5 Seeds Mix (250g)."
+    },
+    {
+      "question": "What is the total weight and shipping of this combo?",
+      "answer": "The total weight is 750g. Orders under 1kg carry a catalog shipping charge of ₹49."
+    }
+  ]
+}

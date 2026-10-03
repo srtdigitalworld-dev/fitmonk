@@ -1,0 +1,77 @@
+{
+  "id": "fm-14",
+  "catalogNumber": 14,
+  "slug": "badaam-elaichi-talbina-500g",
+  "name": "Badam Elaichi Talbina – 500g",
+  "sourceName": "500g Badaam Elaichi Talbina",
+  "displayName": "Badam Elaichi Talbina – 500g",
+  "shortName": null,
+  "category": "breakfast",
+  "subcategory": "talbina",
+  "additionalCategories": [],
+  "description": "Fit Monk Badam Elaichi Talbina is a traditional barley porridge powder infused with fragrant cardamom (elaichi) and crushed almonds (badam). Packaged in a 500g pouch, this wholesome barley porridge is prepared by simmering with milk or water, traditionally sweetened with pure honey for a soothing morning breakfast.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/14-badaam-elaichi-talbina.jpg",
+      "alt": "Badaam Elaichi Talbina — 500g",
+      "width": 1392,
+      "height": 1680
+    }
+  ],
+  "price": 37500,
+  "compareAtPrice": null,
+  "currency": "INR",
+  "packSize": "500g",
+  "sku": null,
+  "ingredients": null,
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": null,
+  "shippingText": null,
+  "weightGrams": 500,
+  "available": null,
+  "featured": false,
+  "variants": [],
+  "relatedProducts": [
+    "fm-22",
+    "fm-04",
+    "fm-16"
+  ],
+  "seoTitle": "Badam Elaichi Talbina – 500g | Fit Monk",
+  "seoDescription": "Buy Fit Monk Badam Elaichi Talbina 500g. Soothing barley porridge powder with cardamom and crushed almonds. Order online with WhatsApp confirmation.",
+  "status": "review",
+  "reviewRequired": true,
+  "reviewNotes": [
+    "Generic porridge wording is not a product ingredient list. Composition equivalence with 1000g is unverified."
+  ],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "talbina",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk Catalog PDF (1).pdf, page 4, item 14",
+    "raw": {
+      "sourceName": "500g Badaam Elaichi Talbina",
+      "cardPricePaise": 37500,
+      "compareAtPricePaise": null,
+      "description": "Talbina is a warm and nourishing porridge made with barley, milk, and typically sweetened with honey.",
+      "text": "500g Badaam Elaichi Talbina\n₹375.00\nTalbina  is  a  warm  and  nourishing  porridge  made  with  barley,  milk,  and\ntypically sweetened with honey."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is Talbina?",
+      "answer": "Talbina is a traditional warm and nourishing porridge made with ground whole barley, gently cooked with milk or water, and typically sweetened with honey."
+    },
+    {
+      "question": "Does Talbina contain gluten?",
+      "answer": "Yes, barley is a gluten-containing grain. People with celiac disease or gluten intolerance should not consume barley porridge."
+    },
+    {
+      "question": "How is Badam Elaichi Talbina prepared?",
+      "answer": "Stir the powder into cold milk or water, bring to a gentle simmer while stirring, and cook until thick and creamy before sweetening to taste."
+    }
+  ]
+}
