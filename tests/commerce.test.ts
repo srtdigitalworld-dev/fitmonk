@@ -55,7 +55,7 @@ test('WhatsApp encoding preserves multiline text and symbols', () => {
   assert.match(url.searchParams.get('text')!, /Line 1\nLine 2/);
   assert.throws(() => buildWhatsAppUrl(customer, quote, null));
   const pending = new URL(buildWhatsAppUrl(customer, quoteCart([item], [{ ...product, shipping: null }]), '919999999999')).searchParams.get('text')!;
-  assert.match(pending, /Shipping to be confirmed/);
+  assert.match(pending, /Shipping\s+To be confirmed/);
   assert.doesNotMatch(pending, /Grand Total:/);
 });
 test('source conflicts prevent publishing and unknown facts remain null', () => {
