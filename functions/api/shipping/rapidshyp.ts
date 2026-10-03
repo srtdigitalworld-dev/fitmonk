@@ -33,7 +33,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
         );
       }
 
-      const isCod = body?.paymentType === 'cod' || Boolean(body?.cod);
+      const isCod = false; // Fit Monk is strictly prepaid only
       const weightGrams = Number(body?.weightGrams) || 500;
       const orderValuePaise = Number(body?.orderValuePaise) || 50000;
 
@@ -41,7 +41,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
         pickupPincode: env.RAPIDSHYP_PICKUP_PINCODE || '110001',
         deliveryPincode,
         weightGrams,
-        cod: isCod,
+        cod: false,
         orderValuePaise
       });
 
