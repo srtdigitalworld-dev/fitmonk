@@ -8,15 +8,16 @@ import { inCategory } from '../src/lib/taxonomy';
 const products=readdirSync('src/content/products').filter(f=>f.endsWith('.json')).map(f=>productSchema.parse(JSON.parse(readFileSync(`src/content/products/${f}`,'utf8'))));
 const item=(n:number,variantId:string|null=null,quantity=1)=>({productId:`fm-${String(n).padStart(2,'0')}`,variantId,quantity});
 test('all 24 source entries have unique canonical pages and retained raw facts',()=>{
- assert.equal(products.length,24); assert.equal(new Set(products.map(p=>p.slug)).size,24);
- assert.deepEqual(products.map(p=>p.catalogNumber),Array.from({length:24},(_,i)=>i+1));
+ assert.equal(products.length,26); assert.equal(new Set(products.map(p=>p.slug)).size,26);
+ assert.deepEqual(products.map(p=>p.catalogNumber),Array.from({length:26},(_,i)=>i+1));
+ const sourceEntries = products.filter(p=>(p.catalogNumber??0)<=24);
  const expected=[299,749,299,375,449,549,499,449,1075,499,799,599,699,375,249,649,649,999,949,1773,375,649,399,449];
- products.forEach((p,i)=>{assert.equal(p.source.raw.cardPricePaise,expected[i]!*100);assert.ok(p.sourceName);assert.ok(p.source.raw.description);assert.equal(p.available,null);assert.equal(p.allergens,null);assert.equal(p.nutrition,null);});
- assert.equal(products.reduce((n,p)=>n+p.variants.length,0),20);
+ sourceEntries.forEach((p,i)=>{assert.equal(p.source.raw.cardPricePaise,expected[i]!*100);assert.ok(p.sourceName);assert.ok(p.source.raw.description);assert.equal(p.available,null);assert.equal(p.allergens,null);assert.equal(p.nutrition,null);});
+ assert.equal(sourceEntries.reduce((n,p)=>n+p.variants.length,0),20);
  assert.deepEqual(products.filter(p=>p.sku).map(p=>p.sku),['DFMIX250','MED250','TAL1K','ECTAL1K']);
 });
 test('blueprint commercial mapping includes cross-listed bundles',()=>{
- const mapping:Record<string,number[]>={'seeds-nuts-snack-mixes':[1,2,3],breakfast:[4,14,16,17,18,19,21,22,23],muesli:[4,23],talbina:[14,16,17,21],'dates-date-sweets':[6,7,8,15],'dried-fruits-fruit-sweets':[5,10,12,13],'honey-dryfruits':[11,24],'combos-bundles':[2,9,18,19,20,22]};
+ const mapping:Record<string,number[]>={'seeds-nuts-snack-mixes':[1,2,3],breakfast:[4,14,16,17,18,19,21,22,23],muesli:[4,23],talbina:[14,16,17,21],'dates-date-sweets':[6,7,8,15,25],'dried-fruits-fruit-sweets':[5,10,12,13,26],'honey-dryfruits':[11,24],'combos-bundles':[2,9,18,19,20,22]};
  for(const [slug,numbers] of Object.entries(mapping)) assert.deepEqual(products.filter(p=>inCategory(p,slug)).map(p=>p.catalogNumber),numbers);
 });
 test('unresolved prices and incomplete bundles cannot become priced orders',()=>{
