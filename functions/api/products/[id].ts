@@ -4,9 +4,12 @@
 // DELETE: Soft-archive product (preserves order history)
 
 import { getAuthenticatedAdmin } from '../_auth';
+import { triggerStorefrontDeploy } from '../_deploy';
 
 interface Env {
   DB?: any;
+  CF_DEPLOY_HOOK_URL?: string;
+  CLOUDFLARE_DEPLOY_HOOK_URL?: string;
 }
 
 export const onRequestGet = async ({ params, env }: { params: { id: string }; env: Env }) => {
@@ -200,6 +203,9 @@ async function handleUpdate({ request, params, env }: { request: Request; params
       now
     ).run();
 
+    // Trigger static storefront build
+    await triggerStorefrontDeploy(env, `Product updated: ${id} (${name}, active=${isAvailable})`);
+
     return new Response(
       JSON.stringify({
         success: true,
@@ -253,6 +259,9 @@ export const onRequestDelete = async ({ request, params, env }: { request: Reque
       JSON.stringify({ action: 'archive' }),
       now
     ).run();
+
+    // Trigger static storefront build
+    await triggerStorefrontDeploy(env, `Product archived: ${id}`);
 
     return new Response(
       JSON.stringify({ success: true, message: 'Product archived successfully (preserved in historical records).' }),

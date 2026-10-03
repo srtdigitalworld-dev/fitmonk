@@ -3,9 +3,12 @@
 // POST: Product creation (Admin authenticated)
 
 import { getAuthenticatedAdmin } from '../_auth';
+import { triggerStorefrontDeploy } from '../_deploy';
 
 interface Env {
   DB?: any;
+  CF_DEPLOY_HOOK_URL?: string;
+  CLOUDFLARE_DEPLOY_HOOK_URL?: string;
 }
 
 export const onRequestGet = async ({ request, env }: { request: Request; env: Env }) => {
@@ -62,16 +65,28 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
     // Fetch variants for returned products
     const productIds = results.map((r: any) => r.id);
     let variants: any[] = [];
+    let mediaList: any[] = [];
     if (productIds.length > 0) {
       const placeholders = productIds.map(() => '?').join(',');
       const varStmt = env.DB.prepare(
         `SELECT * FROM product_variants WHERE product_id IN (${placeholders}) ORDER BY price_paise ASC`
       );
       const varRes = await varStmt.bind(...productIds).all();
-      variants = varRes.results;
+      variants = varRes.results || [];
+
+      // Fetch media
+      const mediaStmt = env.DB.prepare(
+        `SELECT pm.product_id, pm.media_role, m.url, m.alt_text, m.width, m.height
+         FROM product_media pm
+         JOIN media m ON pm.media_id = m.id
+         WHERE pm.product_id IN (${placeholders})
+         ORDER BY pm.sort_order ASC`
+      );
+      const mediaRes = await mediaStmt.bind(...productIds).all();
+      mediaList = mediaRes.results || [];
     }
 
-    // Attach formatted fields and variants
+    // Attach formatted fields, variants and images
     const productsWithVariants = results.map((p: any) => ({
       ...p,
       price: (p.price_paise / 100).toFixed(2),
@@ -79,7 +94,13 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
       is_available: Boolean(p.is_available),
       is_featured: Boolean(p.is_featured),
       is_orderable: Boolean(p.is_orderable),
-      variants: variants.filter((v: any) => v.product_id === p.id)
+      variants: variants.filter((v: any) => v.product_id === p.id),
+      images: mediaList.filter((m: any) => m.product_id === p.id).map((m: any) => ({
+        src: m.url,
+        alt: m.alt_text || p.name,
+        width: m.width || 1200,
+        height: m.height || 1200
+      }))
     }));
 
     return new Response(
@@ -242,6 +263,9 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
       JSON.stringify({ name, slug, price_paise: pricePaise }),
       now
     ).run();
+
+    // Trigger static storefront build
+    await triggerStorefrontDeploy(env, `Product created: ${id} (${name})`);
 
     return new Response(
       JSON.stringify({
