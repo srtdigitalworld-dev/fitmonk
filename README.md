@@ -1,6 +1,6 @@
 # Fit Monk storefront
 
-Static Astro + TypeScript + Tailwind CSS storefront with the source-backed 24-product catalog and premium brand redesign. Orders are prepared locally and opened in WhatsApp for the customer to send. No payment gateway, accounts or order database. **Not deployed. Indexing remains disabled.**
+Static Astro + TypeScript + Tailwind CSS storefront with the source-backed 26-product catalog and premium brand redesign. Orders are prepared locally and opened in WhatsApp for the customer to send. No payment gateway, accounts or order database. **Not deployed. Indexing remains disabled.**
 
 ## Development
 
@@ -8,7 +8,7 @@ Use Node 24 and `npm ci`. Run `npm run dev` for development. Validate with `npm 
 
 ## Architecture
 
-- `src/content/products/*.json`: 24 records, integer-paise prices, variants, provenance and unresolved facts.
+- `src/content/products/*.json`: 26 records, integer-paise prices, variants, provenance and unresolved facts.
 - `src/data/categories.ts` and `src/lib/taxonomy.ts`: commercial taxonomy, Breakfast children Muesli/Talbina and cross-listing.
 - `src/lib/catalog.ts`: source validation and publication filtering. Review records appear only while indexing is disabled.
 - `src/components/product/` and `src/components/ui/`: reusable cards, responsive images, purchase controls, official logo, decorative artwork, collection cards, icons and headings.

@@ -1,6 +1,6 @@
 # Catalog records
 
-This directory contains the 24 entries read from the Product Catalog. Stable IDs preserve original text in `source.raw`, source references, conflicts and review notes. The SEO Blueprint controls categories and relationships. The redesign changes presentation only.
+This directory contains the 26 entries read from the Product Catalog. Stable IDs preserve original text in `source.raw`, source references, conflicts and review notes. The SEO Blueprint controls categories and relationships. The redesign changes presentation only.
 
 Amounts use integer INR paise. Unknown stock, nutrition, allergens and other facts remain null. Keep separate entries separate until equivalence is confirmed. Four incomplete bundles remain non-orderable; unconfirmed variant prices cannot be added as priced orders.
 

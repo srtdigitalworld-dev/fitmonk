@@ -1,0 +1,149 @@
+{
+  "id": "fm-26",
+  "catalogNumber": 26,
+  "slug": "anjeer-dry-fruit-punch",
+  "name": "Anjeer Dry Fruits Punch",
+  "sourceName": "ANJEER DRY FRUITS PUNCH",
+  "displayName": "Anjeer Dry Fruits Punch",
+  "shortName": "Anjeer Dry Fruits Punch",
+  "category": "dried-fruits-fruit-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Traditional anjeer barfi crafted from Afghan anjeer with roasted cashew, almond, and pistachio. Made with pure desi ghee and described as protein-packed, with no refined sugar, no palm oil, and no maida.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/26-anjeer-dryfruits-punch-raw.png",
+      "alt": "Anjeer Dry Fruits Punch – Freshly prepared traditional anjeer barfi container with pistachio and almonds",
+      "width": 285,
+      "height": 373
+    },
+    {
+      "src": "/Fit Monk listing photos/26-anjeer-dryfruits-punch-marketing.png",
+      "alt": "Fit Monk Anjeer Dry Fruit Punch – Marketing and ingredients presentation",
+      "width": 285,
+      "height": 381
+    }
+  ],
+  "price": 34900,
+  "compareAtPrice": 35000,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": [
+    "Afghan anjeer (figs)",
+    "Roasted cashew",
+    "Almond",
+    "Pistachio",
+    "Desi ghee"
+  ],
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": {
+    "amount": 4900,
+    "freeShippingThreshold": null,
+    "freeShipping": false,
+    "chargeBasis": "per-line",
+    "thresholdBasis": null,
+    "weightBands": null,
+    "reviewNotes": [],
+    "catalogMode": null
+  },
+  "shippingText": "250g: + ₹49 shipping. 500g: Free shipping. 1kg: Free shipping.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": true,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": 34900,
+      "compareAtPrice": 35000,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": 4900,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 69900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": null,
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    },
+    {
+      "id": "1kg",
+      "packSize": "1kg",
+      "sku": null,
+      "price": 119800,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": null,
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    }
+  ],
+  "relatedProducts": [
+    "fm-05",
+    "fm-10",
+    "fm-25"
+  ],
+  "seoTitle": "Anjeer Dry Fruits Punch | Fit Monk",
+  "seoDescription": "Buy Anjeer Dry Fruits Punch online from Fit Monk. Traditional Afghan anjeer barfi with roasted cashew, almond & pistachio made in desi ghee. No refined sugar.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "anjeer-and-dried-fruits",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk New Product Addition, Item 26",
+    "raw": {
+      "name": "ANJEER DRY FRUITS PUNCH",
+      "subtitle": "Traditional Anjeer Barfi with Pistachio & Almonds",
+      "variants": "250g — ₹349 (compare-at ₹350, ₹49 shipping), 500g — ₹699 (free shipping), 1kg — ₹1,198 (free shipping)",
+      "facts": "Afghan anjeer with roasted cashew, almond and pistachio. Made with desi ghee. No refined sugar. No palm oil. No maida. Described as protein-packed."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is Anjeer Dry Fruits Punch?",
+      "answer": "Anjeer Dry Fruits Punch is a traditional anjeer barfi made from Afghan anjeer (figs) and roasted cashew, almond, and pistachio bound in pure desi ghee, without refined sugar, palm oil, or maida."
+    },
+    {
+      "question": "What pack sizes and shipping options are available?",
+      "answer": "It is available in 250g (₹349 + ₹49 shipping), 500g (₹699 with free shipping), and 1kg (₹1,198 with free shipping)."
+    }
+  ]
+}

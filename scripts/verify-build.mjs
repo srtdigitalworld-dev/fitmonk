@@ -48,7 +48,7 @@ for (const file of files) {
     assert.equal(response.status, 200, `${path}: route responds`);
   }
 }
-assert.equal(files.length, 40);
+assert.equal(files.length, 42);
 assert.match(await readFile('dist/robots.txt', 'utf8'), /User-agent: \*/);
 assert.match(await readFile('dist/robots.txt', 'utf8'), /Sitemap: https:\/\/fitmonk\.co\.in\/sitemap\.xml/);
 assert.ok(await readFile('dist/sitemap.xml', 'utf8'));

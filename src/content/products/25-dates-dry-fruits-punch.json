@@ -1,0 +1,149 @@
+{
+  "id": "fm-25",
+  "catalogNumber": 25,
+  "slug": "dates-dry-fruit-punch",
+  "name": "Dates Dry Fruits Punch",
+  "sourceName": "DATES DRY FRUITS PUNCH",
+  "displayName": "Dates Dry Fruits Punch",
+  "shortName": "Dates Dry Fruits Punch",
+  "category": "dates-date-sweets",
+  "subcategory": null,
+  "additionalCategories": [],
+  "description": "Dates-based dry fruit punch/barfi crafted with roasted cashew, almond, and pistachio bound in dates. Prepared with desi ghee with no refined sugar, no maida, and no artificial additives.",
+  "images": [
+    {
+      "src": "/Fit Monk listing photos/25-dates-dry-fruits-punch-raw.png",
+      "alt": "Dates Dry Fruits Punch – Freshly prepared traditional dates barfi tray with pistachio and almonds",
+      "width": 357,
+      "height": 476
+    },
+    {
+      "src": "/Fit Monk listing photos/25-dates-dry-fruits-punch-marketing.png",
+      "alt": "Fit Monk Dates Dry Fruit Punch – Marketing and ingredients presentation",
+      "width": 455,
+      "height": 476
+    }
+  ],
+  "price": 29900,
+  "compareAtPrice": 30000,
+  "currency": "INR",
+  "packSize": "250g",
+  "sku": null,
+  "ingredients": [
+    "Dates",
+    "Roasted cashew",
+    "Almond",
+    "Pistachio",
+    "Desi ghee"
+  ],
+  "allergens": null,
+  "nutrition": null,
+  "storage": null,
+  "shipping": {
+    "amount": 4900,
+    "freeShippingThreshold": null,
+    "freeShipping": false,
+    "chargeBasis": "per-line",
+    "thresholdBasis": null,
+    "weightBands": null,
+    "reviewNotes": [],
+    "catalogMode": null
+  },
+  "shippingText": "250g: + ₹49 shipping. 500g: Free shipping. 1kg: Free shipping.",
+  "weightGrams": 250,
+  "available": null,
+  "featured": true,
+  "variants": [
+    {
+      "id": "250g",
+      "packSize": "250g",
+      "sku": null,
+      "price": 29900,
+      "compareAtPrice": 30000,
+      "available": null,
+      "weightGrams": 250,
+      "shipping": {
+        "amount": 4900,
+        "freeShippingThreshold": null,
+        "freeShipping": false,
+        "chargeBasis": "per-line",
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    },
+    {
+      "id": "500g",
+      "packSize": "500g",
+      "sku": null,
+      "price": 59900,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 500,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": null,
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    },
+    {
+      "id": "1kg",
+      "packSize": "1kg",
+      "sku": null,
+      "price": 99800,
+      "compareAtPrice": null,
+      "available": null,
+      "weightGrams": 1000,
+      "shipping": {
+        "amount": 0,
+        "freeShippingThreshold": null,
+        "freeShipping": true,
+        "chargeBasis": null,
+        "thresholdBasis": null,
+        "weightBands": null,
+        "reviewNotes": [],
+        "catalogMode": null
+      }
+    }
+  ],
+  "relatedProducts": [
+    "fm-06",
+    "fm-07",
+    "fm-26"
+  ],
+  "seoTitle": "Dates Dry Fruits Punch | Fit Monk",
+  "seoDescription": "Buy Dates Dry Fruits Punch online from Fit Monk. Traditional dates barfi with roasted cashew, almond & pistachio in desi ghee. No refined sugar.",
+  "status": "review",
+  "reviewRequired": false,
+  "reviewNotes": [],
+  "orderable": true,
+  "kind": "product",
+  "learnHub": "dates-and-khajoor",
+  "promotions": [],
+  "source": {
+    "reference": "Fit Monk New Product Addition, Item 25",
+    "raw": {
+      "name": "DATES DRY FRUITS PUNCH",
+      "subtitle": "Traditional Dates Barfi with Pistachio & Almonds",
+      "variants": "250g — ₹299 (compare-at ₹300, ₹49 shipping), 500g — ₹599 (free shipping), 1kg — ₹998 (free shipping)",
+      "facts": "Roasted cashew, almond and pistachio bound in dates. Made with desi ghee. No refined sugar. No maida. No artificial additives."
+    },
+    "conflicts": []
+  },
+  "faqs": [
+    {
+      "question": "What is Dates Dry Fruits Punch?",
+      "answer": "Dates Dry Fruits Punch is a traditional dates barfi prepared with roasted cashew, almond, and pistachio bound together in dates and desi ghee, without refined sugar, maida, or artificial additives."
+    },
+    {
+      "question": "What pack sizes and shipping options are available?",
+      "answer": "It is available in 250g (₹299 + ₹49 shipping), 500g (₹599 with free shipping), and 1kg (₹998 with free shipping)."
+    }
+  ]
+}

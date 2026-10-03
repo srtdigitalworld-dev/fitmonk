@@ -13,6 +13,8 @@ const products=(await getProducts()).map(p=>p.data);
 const medjool=products.find(p=>p.catalogNumber===8)!;
 const cocktail=products.find(p=>p.catalogNumber===10)!;
 const collections=categories.filter(c=>c.slug!=='breakfast');
+const featuredIds=[25,26,3,5,8,10,1,6];
+const featuredProducts=featuredIds.map(id=>products.find(p=>p.catalogNumber===id)!).filter(Boolean);
 ---
 <BaseLayout>
   <section class="home-hero">
@@ -27,14 +29,14 @@ const collections=categories.filter(c=>c.slug!=='breakfast');
       <h1>Premium foods.<br /><em>Made easy to shop.</em></h1>
       <p class="hero-desc">Explore seed mixes, breakfast favourites, dates and dryfruits. Compare verified packs and prices, then confirm your order personally.</p>
       <div class="hero-actions">
-        <a class="button button-hero-primary" href="/shop/">Shop 24 products <Icon name="arrow" size={18} /></a>
+        <a class="button button-hero-primary" href="/shop/">Shop 26 products <Icon name="arrow" size={18} /></a>
         <a class="hero-secondary-link" href="#collections">Shop by category ↗</a>
       </div>
     </div>
   </section>
-  <div class="service-strip"><span><Icon name="box" />Packs to suit your pantry</span><span><Icon name="bag" />24 catalog products</span><span><Icon name="chat" />Order through WhatsApp</span></div>
+  <div class="service-strip"><span><Icon name="box" />Packs to suit your pantry</span><span><Icon name="bag" />26 catalog products</span><span><Icon name="chat" />Order through WhatsApp</span></div>
   <section class="section category-section" id="collections"><SectionHeading eyebrow="Shop by category" title="Find your Fit Monk favourites." /><div class="collections-grid">{collections.map(c=><CollectionCard name={c.name} slug={c.slug} count={products.filter(p=>inCategory(p,c.slug)).length} />)}</div></section>
-  <section class="section featured-section"><SectionHeading eyebrow="Popular places to start" title="Shop pantry favourites." href="/shop/" linkText="Shop all products" /><div class="product-grid">{products.filter(p=>[3,5,8,10].includes(p.catalogNumber!)).map(p=><ProductCard product={p} />)}</div></section>
+  <section class="section featured-section"><SectionHeading eyebrow="Popular places to start" title="Shop pantry favourites." href="/shop/" linkText="Shop all products" /><div class="product-grid">{featuredProducts.map(p=><ProductCard product={p} />)}</div></section>
   <section class="section collection-feature breakfast-feature"><div class="feature-copy"><p class="eyebrow">The breakfast collection</p><h2>A new start<br />to your <em>morning.</em></h2><p>Explore muesli and Talbina, from individual packs to breakfast combinations.</p><a class="button button-secondary" href="/shop/breakfast/">Explore breakfast <Icon name="arrow" size={18} /></a></div><div class="breakfast-art"><CollectionArt kind="muesli" /><span class="art-caption">MUESLI · TALBINA · BREAKFAST COMBOS</span></div><div class="feature-links"><a href="/shop/muesli/"><span>01</span><strong>Muesli</strong><Icon name="arrow" /></a><a href="/shop/talbina/"><span>02</span><strong>Talbina</strong><Icon name="arrow" /></a><a href="/shop/combos-bundles/"><span>03</span><strong>Combos</strong><Icon name="arrow" /></a></div></section>
   <section class="section"><SectionHeading eyebrow="For your breakfast shelf" title="Find your morning mix." href="/shop/breakfast/" /><div class="product-grid">{products.filter(p=>[4,14,21,23].includes(p.catalogNumber!)).map(p=><ProductCard product={p} />)}</div></section>
   <section class="section twin-collections"><a class="editorial-collection dates-collection" href="/shop/dates-date-sweets/"><div><p class="eyebrow">Dates &amp; date sweets</p><h2>A little sweetness.<br />Plenty to discover.</h2><span class="text-link">Explore the dates collection ↗</span></div><img src={encodeURI(medjool.images[0]!.src)} width={medjool.images[0]!.width} height={medjool.images[0]!.height} alt={medjool.images[0]!.alt} loading="lazy" /></a><a class="editorial-collection fruit-collection" href="/shop/dried-fruits-fruit-sweets/"><div><p class="eyebrow">Dried fruits &amp; fruit sweets</p><h2>Bring a little<br />variety to your day.</h2><span class="text-link">Discover dried fruits ↗</span></div><img src={encodeURI(cocktail.images[0]!.src)} width={cocktail.images[0]!.width} height={cocktail.images[0]!.height} alt={cocktail.images[0]!.alt} loading="lazy" /></a></section>
