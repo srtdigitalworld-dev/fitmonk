@@ -4,6 +4,7 @@
 
 import { PricingEngine } from '../../../src/backend/services/pricing-engine';
 import { CouponEngine } from '../../../src/backend/services/coupon-engine';
+import { getAuthenticatedAdmin } from '../_auth';
 
 interface Env {
   DB?: any;
@@ -11,11 +12,10 @@ interface Env {
 
 export const onRequestGet = async ({ request, env }: { request: Request; env: Env }) => {
   try {
-    const cookieHeader = request.headers.get('cookie') || '';
-    const match = cookieHeader.match(/fitmonk_admin_session=([^;]+)/);
-    if (!match) {
+    const admin = await getAuthenticatedAdmin(request, env);
+    if (!admin) {
       return new Response(
-        JSON.stringify({ error: 'Unauthorized' }),
+        JSON.stringify({ error: 'Unauthorized. Admin login required.' }),
         { status: 401, headers: { 'Content-Type': 'application/json' } }
       );
     }
