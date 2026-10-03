@@ -1,0 +1,33 @@
+# Fit Monk — Cloudflare Architecture Configuration
+# Compatible with Cloudflare Pages Functions, D1 Database, and R2 Media Storage.
+
+name = "fitmonk-store"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+# Cloudflare D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "fitmonk-d1"
+database_id = "239c10d7-11c9-4b9f-a4f2-bc9104366685"
+migrations_dir = "src/backend/db/migrations"
+
+# Cloudflare R2 Media Storage Binding
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "fitmonk-media"
+
+# Non-sensitive environment variables
+[vars]
+STORE_NAME = "Fit Monk"
+STORE_URL = "https://fitmonk.co.in"
+DEFAULT_CURRENCY = "INR"
+
+# Sensitive variables (Set in Cloudflare Dashboard or with `wrangler secret put <KEY>`):
+# - SESSION_SECRET
+# - RAPIDSHYP_API_TOKEN
+# - RAPIDSHYP_BASE_URL
+# - RAPIDSHYP_PICKUP_PINCODE
+# - WHATSAPP_ACCESS_TOKEN
+# - WHATSAPP_PHONE_NUMBER_ID
