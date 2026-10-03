@@ -174,7 +174,6 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     // 3. Server-Side Coupon Validation
     let discountPaise = 0;
     let couponCode: string | null = null;
-    let couponId: string | null = null;
 
     if (body.couponCode && typeof body.couponCode === 'string' && env.DB) {
       const code = body.couponCode.trim().toUpperCase();
@@ -195,7 +194,6 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
             discountPaise = Math.min(Number(cpnRow.discount_value) || 0, subtotalPaise);
           }
           couponCode = cpnRow.code;
-          couponId = cpnRow.id;
         }
       }
     }
@@ -380,9 +378,9 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     const targetPhone = site.whatsappOrderNumber || '919871316958';
     let waMessage = '';
 
-    if (evaluatedItems.length === 1 && (!cust || !cust.address)) {
+    const single = evaluatedItems[0];
+    if (single && evaluatedItems.length === 1 && (!cust || !cust.address)) {
       // Single product direct message format (per Phase 3A specs)
-      const single = evaluatedItems[0];
       waMessage = [
         'Hi Fit Monk,',
         'I want to place an order.',

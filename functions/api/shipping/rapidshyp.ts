@@ -127,6 +127,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
       `).bind(order.id).all();
 
       const shipmentResult = await provider.createShipment({
+        orderId: order.id,
         orderNumber: order.order_number || order.id,
         customerName: order.customer_name || 'Customer',
         customerPhone: order.customer_phone || '',

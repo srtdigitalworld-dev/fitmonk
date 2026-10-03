@@ -1,7 +1,7 @@
 import { createBrowserCart } from './browser';
 import { quoteCart, type CartItem, type CommerceProduct } from './index';
 import { formatMoney } from '../utils/format';
-import { buildOrderMessage, buildWhatsAppUrl, validIndianPhone, type Customer } from '../whatsapp/order';
+import { validIndianPhone, type Customer } from '../whatsapp/order';
 import { site } from '../../data/site';
 
 const products: CommerceProduct[] = JSON.parse(document.querySelector('#commerce-catalog')?.textContent ?? '[]');
