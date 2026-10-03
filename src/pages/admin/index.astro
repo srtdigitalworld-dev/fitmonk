@@ -278,54 +278,44 @@ import '../../styles/admin.css';
 
         <!-- ================= 2. PRODUCTS ================= -->
         <div id="tab-products" class="tab-content space-y-4">
-          <div class="flex items-center justify-between">
-            <div class="text-sm font-medium text-slate-600">All 26 Fit Monk products loaded with variants and pricing</div>
-            <button class="px-4 py-2 text-xs font-bold bg-[#D62828] hover:bg-[#b51e1e] text-white rounded-lg transition shadow-xs cursor-pointer">
-              + New Product
-            </button>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold text-[#2E2E2E]">Products Catalog</h3>
+              <p id="products-count-label" class="text-xs text-slate-500 font-medium">Loading catalog products from Cloudflare D1...</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="relative">
+                <input id="prod-search-input" type="search" placeholder="Search products, SKU..." class="fm-input text-xs pl-8 pr-3 py-1.5 w-48 sm:w-64" />
+                <svg class="w-4 h-4 text-slate-400 absolute left-2.5 top-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+              </div>
+              <button id="open-new-product-modal-btn" class="px-4 py-2 text-xs font-bold bg-[#D62828] hover:bg-[#b51e1e] text-white rounded-lg transition shadow-xs cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                + New Product
+              </button>
+            </div>
           </div>
+
           <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
-            <table class="w-full text-left admin-table">
-              <thead>
-                <tr>
-                  <th>Product</th>
-                  <th>Category</th>
-                  <th>Base Price</th>
-                  <th>Status</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody id="products-table-body">
-                <tr>
-                  <td class="font-bold text-[#2E2E2E]">Dates Dry Fruits Punch</td>
-                  <td>Healthy Bites & Laddus</td>
-                  <td class="font-mono font-bold text-slate-900">₹299.00</td>
-                  <td><span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Active</span></td>
-                  <td><button class="text-[#D62828] hover:underline font-semibold cursor-pointer">Edit</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-[#2E2E2E]">Anjeer Dry Fruits Punch</td>
-                  <td>Healthy Bites & Laddus</td>
-                  <td class="font-mono font-bold text-slate-900">₹349.00</td>
-                  <td><span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Active</span></td>
-                  <td><button class="text-[#D62828] hover:underline font-semibold cursor-pointer">Edit</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-[#2E2E2E]">High Protein Sattu Drink Mix</td>
-                  <td>Energy & Protein Bars</td>
-                  <td class="font-mono font-bold text-slate-900">₹399.00</td>
-                  <td><span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Active</span></td>
-                  <td><button class="text-[#D62828] hover:underline font-semibold cursor-pointer">Edit</button></td>
-                </tr>
-                <tr>
-                  <td class="font-bold text-[#2E2E2E]">Californian Almonds</td>
-                  <td>Dry Fruits & Nuts</td>
-                  <td class="font-mono font-bold text-slate-900">₹449.00</td>
-                  <td><span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Active</span></td>
-                  <td><button class="text-[#D62828] hover:underline font-semibold cursor-pointer">Edit</button></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left admin-table">
+                <thead>
+                  <tr>
+                    <th class="w-12">#</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Base Price</th>
+                    <th>Pack / SKU</th>
+                    <th>Status</th>
+                    <th class="text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="products-table-body">
+                  <tr>
+                    <td colspan="7" class="text-center py-8 text-xs text-slate-400">Loading products from Cloudflare D1...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -662,9 +652,118 @@ import '../../styles/admin.css';
             </div>
           </div>
         </div>
-
       </div>
     </main>
+  </div>
+
+  <!-- ================= PRODUCT EDIT/CREATE MODAL ================= -->
+  <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 hidden">
+    <div class="w-full max-w-2xl bg-white border border-slate-200 rounded-2xl p-6 shadow-2xl relative max-h-[90vh] flex flex-col overflow-hidden">
+      <!-- Fit Monk Top Brand Accent Bar -->
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#D62828] via-[#F57C00] to-[#F4B400]"></div>
+
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200 pt-1">
+        <div>
+          <h3 id="product-modal-title" class="text-lg font-bold text-[#2E2E2E]">Add New Product</h3>
+          <p class="text-xs text-slate-500 font-medium">Manage product catalog information in Cloudflare D1</p>
+        </div>
+        <button id="close-product-modal-btn" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-100 transition">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+
+      <form id="product-form" class="space-y-4 overflow-y-auto py-4 px-1 admin-scrollbar flex-1">
+        <div id="product-form-error" class="hidden p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 text-xs font-medium"></div>
+        <div id="product-form-success" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-medium"></div>
+
+        <input type="hidden" id="prod-id" value="" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-name">Product Name *</label>
+            <input id="prod-name" type="text" required class="fm-input w-full" placeholder="e.g. Kashmiri Almonds – 500g" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-slug">URL Slug *</label>
+            <input id="prod-slug" type="text" required class="fm-input w-full font-mono text-xs" placeholder="e.g. kashmiri-almonds-500g" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-category">Category *</label>
+            <select id="prod-category" class="fm-input w-full text-xs font-medium">
+              <option value="seeds-nuts-snack-mixes">Seeds, Nuts & Snack Mixes</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="muesli">Muesli</option>
+              <option value="talbina">Talbina</option>
+              <option value="dates-date-sweets">Dates & Date Sweets</option>
+              <option value="dried-fruits-fruit-sweets">Dried Fruits & Fruit Sweets</option>
+              <option value="honey-dryfruits">Honey Dryfruits</option>
+              <option value="combos-bundles">Combos & Bundles</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-price">Price (₹) *</label>
+            <input id="prod-price" type="number" step="0.01" min="0" required class="fm-input w-full font-mono font-bold" placeholder="299.00" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-compare-price">Compare-at Price (₹)</label>
+            <input id="prod-compare-price" type="number" step="0.01" min="0" class="fm-input w-full font-mono" placeholder="399.00" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-pack-size">Pack Size</label>
+            <input id="prod-pack-size" type="text" class="fm-input w-full" placeholder="e.g. 250g, 500g, 1kg" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-sku">SKU Code</label>
+            <input id="prod-sku" type="text" class="fm-input w-full uppercase font-mono text-xs" placeholder="e.g. ALM500" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-weight">Weight (grams)</label>
+            <input id="prod-weight" type="number" min="0" class="fm-input w-full font-mono" placeholder="500" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-desc">Description</label>
+          <textarea id="prod-desc" rows="3" class="fm-input w-full text-xs" placeholder="Product details, pantry notes, ingredients..."></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="prod-status">Publication Status</label>
+            <select id="prod-status" class="fm-input w-full text-xs font-medium">
+              <option value="published">Published</option>
+              <option value="review">Review</option>
+              <option value="draft">Draft</option>
+            </select>
+          </div>
+          <div class="flex items-center space-x-6 pt-5">
+            <label class="inline-flex items-center gap-2 cursor-pointer text-xs font-semibold text-slate-700">
+              <input id="prod-available" type="checkbox" checked class="w-4 h-4 text-[#D62828] rounded border-slate-300 focus:ring-[#D62828]" />
+              Active in Storefront
+            </label>
+            <label class="inline-flex items-center gap-2 cursor-pointer text-xs font-semibold text-slate-700">
+              <input id="prod-featured" type="checkbox" class="w-4 h-4 text-[#F57C00] rounded border-slate-300 focus:ring-[#F57C00]" />
+              Featured Pick
+            </label>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 flex items-center justify-end space-x-3">
+          <button type="button" id="cancel-product-btn" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg transition border border-slate-200">
+            Cancel
+          </button>
+          <button type="submit" id="save-product-btn" class="px-5 py-2 text-xs font-bold bg-[#D62828] hover:bg-[#b51e1e] text-white rounded-lg transition shadow-xs">
+            Save Product
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 
   <!-- SCRIPT FOR CLIENT CMS LOGIC -->
@@ -710,6 +809,10 @@ import '../../styles/admin.css';
           viewTitle.textContent = tabMeta[tab].title;
           viewSubtitle.textContent = tabMeta[tab].subtitle;
         }
+
+        if (tab === 'products') {
+          loadAdminProducts();
+        }
       });
     });
 
@@ -730,6 +833,7 @@ import '../../styles/admin.css';
               const el = document.getElementById('admin-name');
               if (el) el.textContent = data.admin.name;
             }
+            loadAdminProducts();
             return;
           }
         }
@@ -758,6 +862,7 @@ import '../../styles/admin.css';
             const el = document.getElementById('admin-name');
             if (el) el.textContent = data.admin.name;
           }
+          loadAdminProducts();
         } else {
           loginError.textContent = data.message || 'Login failed.';
           loginError.classList.remove('hidden');
@@ -772,6 +877,242 @@ import '../../styles/admin.css';
       await fetch('/api/auth/logout', { method: 'POST' });
       window.location.reload();
     });
+
+    // Products State & Dynamic Loading
+    let adminProducts = [];
+    const productsTableBody = document.getElementById('products-table-body');
+    const productsCountLabel = document.getElementById('products-count-label');
+    const prodSearchInput = document.getElementById('prod-search-input');
+    const productModal = document.getElementById('product-modal');
+    const productForm = document.getElementById('product-form');
+    const productModalTitle = document.getElementById('product-modal-title');
+    const productFormError = document.getElementById('product-form-error');
+    const productFormSuccess = document.getElementById('product-form-success');
+    const openNewProductBtn = document.getElementById('open-new-product-modal-btn');
+    const closeProductModalBtn = document.getElementById('close-product-modal-btn');
+    const cancelProductBtn = document.getElementById('cancel-product-btn');
+
+    async function loadAdminProducts() {
+      if (!productsTableBody) return;
+      try {
+        productsTableBody.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-xs text-slate-400">Loading live products from Cloudflare D1...</td></tr>`;
+        const res = await fetch('/api/products?limit=100');
+        if (!res.ok) throw new Error('Failed to load products');
+        const data = await res.json();
+        adminProducts = data.products || [];
+        renderProductsTable(adminProducts);
+      } catch (err) {
+        productsTableBody.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-xs text-rose-600 font-semibold">Error connecting to D1 products API.</td></tr>`;
+      }
+    }
+
+    function renderProductsTable(products) {
+      if (!productsTableBody) return;
+      if (productsCountLabel) {
+        productsCountLabel.textContent = `${products.length} live product${products.length === 1 ? '' : 's'} loaded from Cloudflare D1`;
+      }
+      if (products.length === 0) {
+        productsTableBody.innerHTML = `<tr><td colspan="7" class="text-center py-8 text-xs text-slate-500">No products found.</td></tr>`;
+        return;
+      }
+
+      productsTableBody.innerHTML = products.map((p, idx) => {
+        const isAvail = Boolean(p.is_available);
+        const priceFmt = p.price ? `₹${p.price}` : `₹${(p.price_paise / 100).toFixed(2)}`;
+        const statusClass = isAvail
+          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+          : 'bg-slate-100 text-slate-600 border-slate-200';
+
+        return `
+          <tr data-prod-id="${p.id}" class="hover:bg-slate-50/80 transition-colors">
+            <td class="font-mono text-xs text-slate-400 font-semibold">${p.catalog_number || idx + 1}</td>
+            <td>
+              <div class="font-bold text-[#2E2E2E] text-xs leading-snug">${p.name}</div>
+              <div class="text-[10px] text-slate-400 font-mono mt-0.5">slug: /product/${p.slug}/</div>
+            </td>
+            <td>
+              <span class="text-xs text-slate-600 font-medium">${p.category_name || p.category_id || 'General'}</span>
+            </td>
+            <td>
+              <div class="font-mono font-bold text-slate-900 text-xs">${priceFmt}</div>
+              ${p.compare_at_price ? `<div class="font-mono text-[10px] text-slate-400 line-through">₹${p.compare_at_price}</div>` : ''}
+            </td>
+            <td>
+              <div class="text-xs text-slate-700 font-medium">${p.pack_size || '—'}</div>
+              <div class="text-[10px] text-slate-400 font-mono">${p.sku || '—'}</div>
+            </td>
+            <td>
+              <button 
+                onclick="window.toggleProductActive('${p.id}', ${isAvail})"
+                title="Click to ${isAvail ? 'Disable' : 'Enable'}"
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold border transition cursor-pointer ${statusClass}">
+                ${isAvail ? '● Active' : '○ Disabled'}
+              </button>
+            </td>
+            <td class="text-right whitespace-nowrap">
+              <button onclick="window.openEditProduct('${p.id}')" class="px-2.5 py-1 text-xs font-semibold text-[#D62828] hover:bg-red-50 rounded-md transition cursor-pointer">
+                Edit
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Search filter
+    if (prodSearchInput) {
+      prodSearchInput.addEventListener('input', (e) => {
+        const q = e.target.value.toLowerCase().trim();
+        if (!q) {
+          renderProductsTable(adminProducts);
+          return;
+        }
+        const filtered = adminProducts.filter(p => 
+          (p.name && p.name.toLowerCase().includes(q)) ||
+          (p.slug && p.slug.toLowerCase().includes(q)) ||
+          (p.sku && p.sku.toLowerCase().includes(q)) ||
+          (p.category_name && p.category_name.toLowerCase().includes(q))
+        );
+        renderProductsTable(filtered);
+      });
+    }
+
+    // Toggle Active / Disabled
+    window.toggleProductActive = async function(id, currentAvail) {
+      try {
+        const nextAvail = !currentAvail;
+        const res = await fetch(`/api/products/${id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ is_available: nextAvail ? 1 : 0 })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          const item = adminProducts.find(p => p.id === id);
+          if (item) item.is_available = nextAvail;
+          renderProductsTable(adminProducts);
+        } else {
+          alert(data.message || 'Failed to update product status.');
+        }
+      } catch (e) {
+        alert('Network error while updating status.');
+      }
+    };
+
+    // Open Edit Modal
+    window.openEditProduct = function(id) {
+      const p = adminProducts.find(item => item.id === id);
+      if (!p) return;
+
+      productFormError.classList.add('hidden');
+      productFormSuccess.classList.add('hidden');
+      productModalTitle.textContent = 'Edit Product';
+
+      document.getElementById('prod-id').value = p.id;
+      document.getElementById('prod-name').value = p.name || '';
+      document.getElementById('prod-slug').value = p.slug || '';
+      document.getElementById('prod-category').value = p.category_id || 'seeds-nuts-snack-mixes';
+      document.getElementById('prod-price').value = p.price || (p.price_paise ? (p.price_paise / 100).toFixed(2) : '');
+      document.getElementById('prod-compare-price').value = p.compare_at_price || (p.compare_at_price_paise ? (p.compare_at_price_paise / 100).toFixed(2) : '');
+      document.getElementById('prod-pack-size').value = p.pack_size || '';
+      document.getElementById('prod-sku').value = p.sku || '';
+      document.getElementById('prod-weight').value = p.weight_grams || '';
+      document.getElementById('prod-desc').value = p.description || '';
+      document.getElementById('prod-status').value = p.status || 'published';
+      document.getElementById('prod-available').checked = Boolean(p.is_available);
+      document.getElementById('prod-featured').checked = Boolean(p.is_featured);
+
+      productModal.classList.remove('hidden');
+    };
+
+    // Open New Modal
+    if (openNewProductBtn) {
+      openNewProductBtn.addEventListener('click', () => {
+        productFormError.classList.add('hidden');
+        productFormSuccess.classList.add('hidden');
+        productModalTitle.textContent = 'Add New Product';
+        productForm.reset();
+        document.getElementById('prod-id').value = '';
+        document.getElementById('prod-available').checked = true;
+        document.getElementById('prod-status').value = 'published';
+        productModal.classList.remove('hidden');
+      });
+    }
+
+    // Slug auto-generation on name change (for new products)
+    const prodNameInput = document.getElementById('prod-name');
+    const prodSlugInput = document.getElementById('prod-slug');
+    if (prodNameInput && prodSlugInput) {
+      prodNameInput.addEventListener('input', () => {
+        if (!document.getElementById('prod-id').value) {
+          prodSlugInput.value = prodNameInput.value
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-|-$/g, '');
+        }
+      });
+    }
+
+    function closeProductModal() {
+      productModal.classList.add('hidden');
+      productForm.reset();
+      productFormError.classList.add('hidden');
+      productFormSuccess.classList.add('hidden');
+    }
+
+    if (closeProductModalBtn) closeProductModalBtn.addEventListener('click', closeProductModal);
+    if (cancelProductBtn) cancelProductBtn.addEventListener('click', closeProductModal);
+
+    // Save Product Form Handler
+    if (productForm) {
+      productForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        productFormError.classList.add('hidden');
+        productFormSuccess.classList.add('hidden');
+
+        const editId = document.getElementById('prod-id').value;
+        const payload = {
+          name: document.getElementById('prod-name').value.trim(),
+          slug: document.getElementById('prod-slug').value.trim(),
+          category_id: document.getElementById('prod-category').value,
+          price: Number(document.getElementById('prod-price').value),
+          compare_at_price: document.getElementById('prod-compare-price').value ? Number(document.getElementById('prod-compare-price').value) : null,
+          pack_size: document.getElementById('prod-pack-size').value.trim(),
+          sku: document.getElementById('prod-sku').value.trim(),
+          weight_grams: document.getElementById('prod-weight').value ? Number(document.getElementById('prod-weight').value) : null,
+          description: document.getElementById('prod-desc').value.trim(),
+          status: document.getElementById('prod-status').value,
+          is_available: document.getElementById('prod-available').checked ? 1 : 0,
+          is_featured: document.getElementById('prod-featured').checked ? 1 : 0
+        };
+
+        const url = editId ? `/api/products/${editId}` : '/api/products';
+        const method = editId ? 'PUT' : 'POST';
+
+        try {
+          const res = await fetch(url, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            productFormSuccess.textContent = editId ? 'Product updated successfully.' : 'Product created successfully.';
+            productFormSuccess.classList.remove('hidden');
+            setTimeout(() => {
+              closeProductModal();
+              loadAdminProducts();
+            }, 700);
+          } else {
+            productFormError.textContent = data.message || 'Failed to save product.';
+            productFormError.classList.remove('hidden');
+          }
+        } catch (err) {
+          productFormError.textContent = 'Server communication error.';
+          productFormError.classList.remove('hidden');
+        }
+      });
+    }
 
     // Coupon Live Tester
     const testCouponBtn = document.getElementById('test-coupon-btn');
