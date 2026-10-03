@@ -52,16 +52,61 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
       );
     }
 
-    const { results } = await env.DB.prepare(`
-      SELECT o.*, c.name as customer_name, c.email as customer_email, c.phone as customer_phone
+    const url = new URL(request.url);
+    const search = url.searchParams.get('search');
+    const paymentStatus = url.searchParams.get('payment_status');
+    const fulfillmentStatus = url.searchParams.get('fulfillment_status');
+    const dateRange = url.searchParams.get('range');
+
+    let query = `
+      SELECT o.*,
+        COALESCE(o.customer_name, c.name, 'Customer') as customer_name,
+        COALESCE(o.customer_email, c.email) as customer_email,
+        COALESCE(o.customer_phone, c.phone) as customer_phone,
+        (SELECT COUNT(*) FROM order_items oi WHERE oi.order_id = o.id) as item_count
       FROM orders o
       LEFT JOIN customers c ON o.customer_id = c.id
-      ORDER BY o.created_at DESC
-      LIMIT 100
-    `).all();
+      WHERE 1=1
+    `;
+    const params: any[] = [];
+
+    if (search) {
+      query += ` AND (o.order_number LIKE ? OR o.customer_name LIKE ? OR o.customer_phone LIKE ? OR c.name LIKE ? OR c.phone LIKE ?)`;
+      const s = `%${search}%`;
+      params.push(s, s, s, s, s);
+    }
+
+    if (paymentStatus && paymentStatus !== 'all') {
+      query += ` AND o.payment_status = ?`;
+      params.push(paymentStatus);
+    }
+
+    if (fulfillmentStatus && fulfillmentStatus !== 'all') {
+      query += ` AND o.fulfillment_status = ?`;
+      params.push(fulfillmentStatus);
+    }
+
+    if (dateRange === 'today') {
+      const startOfDay = Math.floor(new Date().setHours(0, 0, 0, 0) / 1000);
+      query += ` AND o.created_at >= ?`;
+      params.push(startOfDay);
+    } else if (dateRange === '7days') {
+      const sevenDaysAgo = Math.floor((Date.now() - 7 * 24 * 3600 * 1000) / 1000);
+      query += ` AND o.created_at >= ?`;
+      params.push(sevenDaysAgo);
+    } else if (dateRange === '30days') {
+      const thirtyDaysAgo = Math.floor((Date.now() - 30 * 24 * 3600 * 1000) / 1000);
+      query += ` AND o.created_at >= ?`;
+      params.push(thirtyDaysAgo);
+    }
+
+    query += ` ORDER BY o.created_at DESC LIMIT 100`;
+
+    const stmt = env.DB.prepare(query);
+    const { results } = await (params.length > 0 ? stmt.bind(...params) : stmt).all();
 
     return new Response(
-      JSON.stringify({ orders: results }),
+      JSON.stringify({ orders: results || [] }),
       { status: 200, headers: { 'Content-Type': 'application/json' } }
     );
   } catch (err: any) {
