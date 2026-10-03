@@ -45,7 +45,7 @@ test('exact catalog promotions apply and are not extrapolated',()=>{
 test('checkout allows shipping confirmation, validates phone and preserves notes',()=>{
  const customer={name:'Test Customer',phone:'+91 98765 43210',address:'Test address',city:'Test city',state:'Test state',pinCode:'110001',note:'A & B + C'};
  const message=buildOrderMessage(customer,quoteCart([item(8,'250g')],products));
- assert.match(message,/NEW FIT MONK ORDER/);assert.match(message,/Shipping to be confirmed/);assert.doesNotMatch(message,/Grand Total/);assert.match(message,/A & B \+ C/);
+ assert.match(message,/🛍️ FIT MONK ORDER/);assert.match(message,/Shipping\s+To be confirmed/);assert.doesNotMatch(message,/Grand Total/);assert.match(message,/A & B \+ C/);
  assert.ok(validIndianPhone('09876543210'));assert.ok(validIndianPhone('9876543210'));assert.equal(validIndianPhone('abcdefghij'),false);
  assert.throws(()=>buildOrderMessage({...customer,pinCode:'123'},quoteCart([item(1)],products)));
 });
