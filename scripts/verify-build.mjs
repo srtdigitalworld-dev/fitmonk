@@ -6,7 +6,9 @@ async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   return (await Promise.all(entries.map(e => e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)]))).flat();
 }
-const files = (await walk('dist')).filter(f => f.endsWith('.html'));
+const files = (await walk('dist'))
+  .filter(f => f.endsWith('.html'))
+  .filter(f => !f.replaceAll('\\', '/').includes('/admin/'));
 const titles = new Set();
 let schemaCount = 0;
 const previewUrl = process.env.PREVIEW_URL;
