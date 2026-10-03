@@ -63,7 +63,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
     }
 
     // 2. Verify password with PBKDF2-SHA256
-    const isValid = await AuthService.verifyPassword(password, admin.password_hash, admin.password_salt);
+    const isValid = await AuthService.verifyPassword(password, admin.password_hash, admin.salt || admin.password_salt);
     if (!isValid) {
       return new Response(
         JSON.stringify({ success: false, message: 'Invalid credentials.' }),
@@ -103,7 +103,7 @@ export const onRequestPost = async ({ request, env }: { request: Request; env: E
           id: admin.id,
           email: admin.email,
           name: admin.name,
-          role: admin.role
+          role: admin.role_id || admin.role
         }
       }),
       {

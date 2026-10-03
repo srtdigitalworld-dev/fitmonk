@@ -46,7 +46,7 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
     const now = Math.floor(Date.now() / 1000);
 
     const session = await env.DB.prepare(
-      `SELECT s.*, a.name, a.email, a.role, a.is_active
+      `SELECT s.*, a.name, a.email, a.role_id AS role, a.is_active
        FROM admin_sessions s
        JOIN admins a ON s.admin_id = a.id
        WHERE s.token_hash = ? AND s.expires_at > ? AND a.is_active = 1
