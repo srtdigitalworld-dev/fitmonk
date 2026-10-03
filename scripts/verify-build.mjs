@@ -28,9 +28,10 @@ for (const file of files) {
     assert.match(image[0], /\balt="[^"]*"/, `${file}: image alternative`);
     assert.match(image[0], /\bwidth="\d+"/, `${file}: reserved image width`);
     assert.match(image[0], /\bheight="\d+"/, `${file}: reserved image height`);
+  }
   for (const asset of html.matchAll(/\bsrc="(\/[^"?#]+)"/g)) {
     if (asset[1].startsWith('/video/')) continue; // Large master video excluded from deployment bundle
-    await access(join('dist', asset[1]));
+    await access(join('dist', decodeURIComponent(asset[1])));
   }
   for (const anchor of html.matchAll(/href="((?:\/[^"?#]*)?)#([^"?]+)"/g)) {
     const path = anchor[1];
@@ -49,5 +50,7 @@ for (const file of files) {
 }
 assert.equal(files.length, 40);
 assert.match(await readFile('dist/robots.txt', 'utf8'), /User-agent: \*/);
-assert.match(await readFile('dist/robots.txt', 'utf8'), /Disallow: \/\s/);
+assert.match(await readFile('dist/robots.txt', 'utf8'), /Sitemap: https:\/\/fitmonk\.co\.in\/sitemap\.xml/);
+assert.ok(await readFile('dist/sitemap.xml', 'utf8'));
+assert.ok(await readFile('dist/sitemap-index.xml', 'utf8'));
 console.log(`Verified ${files.length} HTML pages and ${schemaCount} JSON-LD blocks: titles, H1, metadata, assets, image dimensions, links, anchors and noindex.${previewUrl ? ' All routes returned HTTP 200.' : ''}`);
