@@ -28,18 +28,11 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
       );
     }
 
-    let query = `SELECT key, value, type, \`group\` FROM settings WHERE is_public = 1`;
+    let query = `SELECT key_name, value, group_name FROM settings`;
     const params: any[] = [];
 
-    // If admin is requesting, allow all settings
-    const cookieHeader = request.headers.get('cookie') || '';
-    const match = cookieHeader.match(/fitmonk_admin_session=([^;]+)/);
-    if (match) {
-      query = `SELECT key, value, type, \`group\` FROM settings`;
-    }
-
     if (group) {
-      query += ` WHERE \`group\` = ?`;
+      query += ` WHERE group_name = ?`;
       params.push(group);
     }
 
@@ -47,10 +40,16 @@ export const onRequestGet = async ({ request, env }: { request: Request; env: En
 
     const formatted: Record<string, any> = {};
     for (const row of results as any[]) {
-      if (row.type === 'number') formatted[row.key] = Number(row.value);
-      else if (row.type === 'boolean') formatted[row.key] = row.value === 'true';
-      else if (row.type === 'json') formatted[row.key] = JSON.parse(row.value);
-      else formatted[row.key] = row.value;
+      if (row.value === 'true') formatted[row.key_name] = true;
+      else if (row.value === 'false') formatted[row.key_name] = false;
+      else if (!isNaN(Number(row.value)) && row.value.trim() !== '') formatted[row.key_name] = Number(row.value);
+      else {
+        try {
+          formatted[row.key_name] = JSON.parse(row.value);
+        } catch {
+          formatted[row.key_name] = row.value;
+        }
+      }
     }
 
     return new Response(JSON.stringify({ settings: formatted }), {
